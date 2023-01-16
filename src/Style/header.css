@@ -1,0 +1,51 @@
+.header{
+    display: flex;
+    background-color: #4ABEFF;
+    height: 100px;
+    align-items: center;
+    
+    
+}
+.container{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#signIn {
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: 0px 30px;
+}
+a img{
+    width: 30px;
+    color: white;
+}
+input{
+    width: 523px;
+    height: 48px;
+
+    background: #FFFFFF;
+    border-radius: 20px 0px 0px 20px;
+    border-color: #FFFFFF;
+}
+#searchButton{
+    height: 48px;
+    width: 132px;
+
+    background: #FF8957;
+    border-radius: 0px 20px 20px 0px;
+    border-color: #FF8957;
+}
+
+.shopingP{
+    width: 25px;
+    height: 25px;
+    background-color: #FF8957;
+    border-radius: 50%;
+    color: #FFFFFF;
+    flex-grow: 0;
+    font-size: 15px;
+    margin-left: 10px;
+}

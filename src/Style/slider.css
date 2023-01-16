@@ -1,0 +1,38 @@
+.sliderContainer {
+  width: 1200px;
+  height: 500px;
+}
+.firstSlide {
+  width: 1460px;
+}
+
+.firstImage {
+  display: block;
+  width: 379px;
+  height: 408px;
+}
+
+.firstH3 {
+  display: block;
+  margin-bottom: 20px;
+  color: #4abeff;
+}
+.firstH2 {
+  margin-bottom: 150px;
+  color: #4abeff;
+}
+.shopButton {
+  background-color: #ff8957;
+  border-radius: 20px;
+  width: 144px;
+  height: 61px;
+  color: white;
+}
+.viewButton {
+  background-color: white;
+  border-radius: 20px;
+  width: 144px;
+  height: 61px;
+  color: black;
+  margin-left: 40px;
+}
