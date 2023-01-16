@@ -1,19 +1,18 @@
-import "../../Style/nav.css"
+import "../../Style/nav.css";
 export default function Navbar() {
-  return <div className="navContainer">
-    <section>
+  return (
+    <div className="navContainer">
+      <section>
         <img src="./Popular products.png" alt="" />
-    </section>
+      </section>
 
-    <section>
-      <button className="groupButton">Cameras</button>
-      <button className="groupButton">Laptops</button>
-      <button className="groupButton">Tablets</button>
-      <button className="groupButton">Mouse</button>
-      <button className="groupButton">Sale</button>
-    
-
-    </section>
-
-  </div>;
+      <section>
+        {/* <button className="groupButton" onClick={}>Sale</button>
+      <button className="groupButton" onClick={}>appliances</button>
+      <button className="groupButton" onClick={}>computers & tablets</button>
+      <button className="groupButton" onClick={}>gaming console</button>
+      <button className="groupButton" onClick={}>telescope</button> */}
+      </section>
+    </div>
+  );
 }
