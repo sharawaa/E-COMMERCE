@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PageBrowser from "./components/PageBrowser";
-import WelcomePage from "./components/WelcomePage";
+//import WelcomePage from "./components/WelcomePage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -20,11 +20,12 @@ function App() {
 
   return (
     <div>
-      {isLoggedIn ? (
+      <PageBrowser />
+      {/* {isLoggedIn ? (
         <PageBrowser setIsLoggedIn={setIsLoggedIn} />
       ) : (
         <WelcomePage setLogin={loginHandler} />
-      )}
+      )} */}
     </div>
   );
 }
