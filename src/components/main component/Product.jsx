@@ -15,7 +15,7 @@ export default function Product(props) {
             {props.title}
           </Card.Title>
           <Card.Text>{props.sale}%</Card.Text>
-          <Card.Text>{props.price}$</Card.Text>
+          <Card.Text>{props.price}$</Card.Text> 
           <Button variant="warning" style={{}}>
             <img
               style={{ width: "30px" }}

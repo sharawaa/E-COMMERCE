@@ -1,6 +1,6 @@
-import Footer from "./Browser/Footer";
-import Header from "./Browser/Header";
-import Main from "./Browser/Main";
+import Footer from "../Browser/Footer";
+import Header from "../Browser/Header";
+import Main from "../Browser/Main";
 export default function PageBrowser(prop){
   const {  setIsLoggedIn } = prop;
     return(

@@ -9,7 +9,7 @@ import Product from "../main component/Product";
 
 export default function Main() {
   return (
-    <div class="Container container">
+    <div class="Container">
       <Slider />
       <Navbar />
       <section className="product">

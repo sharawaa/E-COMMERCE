@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "../Style/welcomePage.css"
+import "../../Style/welcomePage.css"
 
 export default function WelcomePage(prop){
     const {setLogin} = prop;

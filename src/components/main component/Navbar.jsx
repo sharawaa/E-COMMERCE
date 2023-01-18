@@ -9,13 +9,11 @@ export default function Navbar() {
     if (e.target.innerText === "All") {
       setInput(DATA);
     } else {
-      let hoho = DATA.filter(
-        (product) => product.category === e.target.innerText
-      );
+      let hoho = DATA.filter((product) => product.category === e.target.innerText);
       setInput(hoho);
     }
   }
-  console.log(Input);
+  // console.log(Input);
   return (
     <>
       <div className="navContainer">
@@ -24,21 +22,11 @@ export default function Navbar() {
         </section>
 
         <section>
-          <button className="groupButton" onClick={sharva}>
-            All
-          </button>
-          <button className="groupButton" onClick={sharva}>
-            appliances
-          </button>
-          <button className="groupButton" onClick={sharva}>
-            computers & tablets
-          </button>
-          <button className="groupButton" onClick={sharva}>
-            gaming console
-          </button>
-          <button className="groupButton" onClick={sharva}>
-            telescope
-          </button>
+          <button className="groupButton" onClick={sharva}>All</button>
+          <button className="groupButton" onClick={sharva}>appliances</button>
+          <button className="groupButton" onClick={sharva}>computers & tablets</button>
+          <button className="groupButton" onClick={sharva}>gaming console</button>
+          <button className="groupButton" onClick={sharva}>telescope</button>
         </section>
       </div>
 

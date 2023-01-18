@@ -1,12 +1,23 @@
+
+.bigSlider{
+  width: 100%;
+  height: 60vh;
+  background-color: rgb(19, 52, 128);
+}
+
 .sliderContainer {
   width: 1200px;
   height: 500px;
+ 
+  background-color: rgb(19, 52, 128);
 }
 .firstSlide {
   width: 1460px;
+  
 }
 
 .firstImage {
+  
   display: block;
   width: 379px;
   height: 408px;
@@ -15,11 +26,11 @@
 .firstH3 {
   display: block;
   margin-bottom: 20px;
-  color: #4abeff;
+  color: rgb(255, 255, 255);
 }
 .firstH2 {
   margin-bottom: 150px;
-  color: #4abeff;
+  color: rgb(255, 255, 255);
 }
 .shopButton {
   background-color: #ff8957;
