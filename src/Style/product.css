@@ -1,6 +1,22 @@
-.productC{
-    display: flex;
-    
-    max-width: 1200px;
-    margin: auto;
+.productC {
+  display: flex;
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+.productContainer {
+  display: flex;
+}
+
+.card {
+  height: 350px;
+  width: 282px;
+}
+.cardImg {
+  width: 280px;
+  height: 168px;
+}
+.icon {
+  width: 30px;
 }

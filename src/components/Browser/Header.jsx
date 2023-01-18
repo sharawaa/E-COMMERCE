@@ -1,15 +1,24 @@
+import { useState } from "react";
+import { Route, useNavigate } from "react-router-dom";
 import "../../Style/header.css";
 
 export default function Header(prop) {
   const { setIsLoggedIn } = prop;
+  const navigate = useNavigate();
+  const [val, setVal] = useState("");
+  function qwe() {
+    navigate(`/search/${val}`);
+  }
   return (
     <div className="header">
       <div className="container">
         <img src="./E-logo (1).png" alt="#" />
 
         <section>
-          <input type="" />
-          <button id="searchButton">Search</button>
+          <input onChange={(e) => setVal(e.target.value)} type="" />
+          <button onClick={qwe} id="searchButton">
+            Search
+          </button>
         </section>
 
         <section style={{ display: "flex" }}>
@@ -19,7 +28,7 @@ export default function Header(prop) {
               alt="#"
             />
           </a>
-          <a href="##" id="signIn">
+          <a href="login" id="signIn">
             sign in
           </a>
           <a href="##">
@@ -32,6 +41,7 @@ export default function Header(prop) {
           <p className="shopingP">+0</p>
           <button
             type="button"
+            href="/"
             class="btn btn-light"
             style={{ marginLeft: "30px" }}
             onClick={() => setIsLoggedIn(false)}

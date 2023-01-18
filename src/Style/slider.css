@@ -1,23 +1,22 @@
-
-.bigSlider{
+.bigSlider {
   width: 100%;
   height: 60vh;
   background-color: rgb(19, 52, 128);
 }
 
 .sliderContainer {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
   height: 500px;
- 
+
   background-color: rgb(19, 52, 128);
 }
 .firstSlide {
   width: 1460px;
-  
 }
 
 .firstImage {
-  
   display: block;
   width: 379px;
   height: 408px;

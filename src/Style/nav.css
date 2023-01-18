@@ -1,13 +1,16 @@
-.navContainer{
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    
+.navContainer {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
 }
-.groupButton{
-    width: 120px;
-    height: 50px ;
-    border-radius: 25px;
-    margin: 0px 20px;
+.groupButton {
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 0px 20px;
+}
 
+.products {
+  display: flex;
+  flex-wrap: wrap;
 }
