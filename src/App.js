@@ -1,16 +1,17 @@
 //import { useState } from "react";
 import PageBrowser from "./components/pages/PageBrowser";
-import WelcomePage from "./components/pages/WelcomePage";
+
 import { Route, Routes, useNavigate } from "react-router-dom";
 import ProductCard from "./components/pages/ProductCard";
 import Searchs from "./components/pages/Searchs";
 import { useState } from "react";
 import { users } from "./util/data";
-import Header from "./components/Browser/Header";
+//import Header from "./components/Browser/Header";
 import Profile from "./components/pages/Profile";
-import HeaderAdmin from "./components/pages/admin/HeaderAdmin";
+//import HeaderAdmin from "./components/pages/admin/HeaderAdmin";
 import AdminHome from "./components/pages/admin/AdminHome";
 import Main from "./components/Browser/Main";
+import Login from "./components/pages/Login";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -38,7 +39,7 @@ function App() {
         <Route
           path="/login"
           element={
-            <WelcomePage
+            <Login
               users={data}
               setData={setData}
               loginHandler={loginHandler}

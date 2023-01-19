@@ -11,16 +11,14 @@ export default function ProductCard() {
   let data = DATA.filter((asd) => asd.id.includes(test.id));
   const [x, setX] = useState(data[0].stock);
   function add() {
-    if (data[0].stock < x) {
+    if (x) {
       setX(x + 1);
     } else {
     }
   }
-  function min() {
-    if (data[0].stock < x) {
-      setX(x - 1);
-    } else {
-    }
+  function min(){
+setX(x - 1);
+
   }
 
   return (

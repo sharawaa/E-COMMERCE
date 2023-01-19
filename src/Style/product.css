@@ -33,7 +33,13 @@
   background-color: orange;
   border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
+  color: white;
+  font-size: 20px;
   
+  
+}
+.sale p{
+  margin-left: 25px;
 }
 
 

@@ -18,27 +18,29 @@
     color: #FFFFFF;
     margin: 0px 30px;
 }
-a img{
-    width: 30px;
-    color: white;
-}
-input{
+
+.searchInp{
     width: 523px;
     height: 48px;
 
     background: #FFFFFF;
     border-radius: 20px 0px 0px 20px;
-    border-color: #FFFFFF;
+    
+    border: none;
 }
 #searchButton{
     height: 48px;
     width: 132px;
-
+    border: none;
     background: #FF8957;
     border-radius: 0px 20px 20px 0px;
     border-color: #FF8957;
 }
-
+.logOut{
+    text-decoration: none;
+    color: #FFFFFF;
+    margin: 0px 20px;
+}
 .shopingP{
     width: 25px;
     height: 25px;

@@ -11,7 +11,7 @@ export default function Product(props) {
   return (
     <div className="productContainer">
       <Card id="card" onClick={pop}>
-        <div className="sale">{props.sale}%</div>
+        <div className="sale"><p>{props.sale}%</p></div>
         <Card.Img variant="top" id="cardImg" src={props.image} />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>

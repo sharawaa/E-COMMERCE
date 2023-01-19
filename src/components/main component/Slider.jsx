@@ -7,7 +7,7 @@ function UncontrolledExample() {
         <Carousel>
           <Carousel.Item interval={1000} className="firstSlide">
             <img className="firstImage" src="./Group 8.png" alt="First slide" />
-            <Carousel.Caption>
+            <Carousel.Caption className="textSlide">
               <section className="title">
               <h1 className=" firstH3">Canon</h1>
               <h2 className="firstH2">Camera</h2>
@@ -21,7 +21,7 @@ function UncontrolledExample() {
 
           <Carousel.Item interval={1000}>
             <img className="firstImage" src="Frame 29.png" alt="First slide" />
-            <Carousel.Caption>
+            <Carousel.Caption className="textSlide">
              <section className="title">
               <h1 className=" firstH3">Bose</h1>
               <h2 className="firstH2">headphones</h2>
@@ -39,7 +39,7 @@ function UncontrolledExample() {
               src="./Frame 29 (1).png"
               alt="First slide"
             />
-            <Carousel.Caption>
+            <Carousel.Caption className="textSlide">
               <section className="title">
               <h1 className=" firstH3">Major</h1>
               <h2 className="firstH2">Gaming console</h2>

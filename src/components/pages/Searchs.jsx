@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { DATA } from "../../util/data";
+import "../../Style/search.css"
 
 import Product from "../main component/Product";
 
@@ -11,7 +12,7 @@ export default function Searchs() {
   );
 
   return (
-    <>
+    <div className="container SearchCont">
       {dat.map((e) => (
         <Product
           title={e.name}
@@ -22,6 +23,6 @@ export default function Searchs() {
           id={e.id}
         />
       ))}
-    </>
+    </div>
   );
 }

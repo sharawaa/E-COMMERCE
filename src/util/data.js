@@ -525,33 +525,14 @@ export const DATA = [
 ];
 export const users = [
   {
-    userName: "bataa",
-    password: "zxc",
-    role: "user",
+    userName: "99119911",
+    password: "123",
+    role: "admin",
   },
   {
-    userName: "dorjo",
+    userName: "88118811",
     password: "123",
     role: "user",
   },
-  {
-    userName: "suhee",
-    password: "iop",
-    role: "user",
-  },
-  {
-    userName: "suldee",
-    password: "qwe",
-    role: "user",
-  },
-  {
-    userName: "sharva",
-    password: "qwe",
-    role: "admin",
-  },
-  {
-    userName: "nagi",
-    password: "asd",
-    role: "admin",
-  },
+  
 ];

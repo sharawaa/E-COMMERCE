@@ -15,7 +15,7 @@ export default function Header(prop) {
         <img src="./E-logo (1).png" alt="#" />
 
         <section>
-          <input onChange={(e) => setVal(e.target.value)} type="" />
+          <input placeholder="Search any things" className="searchInp" onChange={(e) => setVal(e.target.value)} type="" />
           <button onClick={qwe} id="searchButton">
             Search
           </button>
@@ -26,26 +26,23 @@ export default function Header(prop) {
             <div>
               <a href="/profile">
                 <img
-                  src="https://cdn2.iconfinder.com/data/icons/user-interface-169/32/about-512.png"
+                  src="./profile.svg"
                   alt="#"
                 />
               </a>
 
-              <a href="/">Log out</a>
+              <a className="logOut" href="/">Log out</a>
             </div>
           ) : (
-            <div>
+            
               <a href="login" id="signIn">
                 sign in
               </a>
-            </div>
+            
           )}
 
           <a href="##">
-            <img
-              src="https://cdn0.iconfinder.com/data/icons/finance-e-commerce/53/cart-shoping-trolly-plain-128.png"
-              alt=""
-            />
+          <img  src="./tereg.svg" alt="" />
           </a>
 
           <p className="shopingP">+0</p>

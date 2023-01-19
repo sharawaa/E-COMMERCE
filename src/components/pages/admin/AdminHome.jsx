@@ -1,12 +1,16 @@
-import AdmFooter from "./AdmFooter";
+import SideMenu from "./SideMenu";
 import HeaderAdmin from "./HeaderAdmin";
+
 
 export default function AdminHome() {
   return (
     <>
       <HeaderAdmin />
+<div>
 
-      <AdmFooter />
+<SideMenu />
+</div>
+      
     </>
   );
 }
