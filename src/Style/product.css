@@ -7,16 +7,34 @@
 
 .productContainer {
   display: flex;
+  margin: 20px;
 }
 
-.card {
+#card {
   height: 350px;
   width: 282px;
+  border-radius: 30px;
 }
-.cardImg {
+#cardImg {
   width: 280px;
   height: 168px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  
 }
 .icon {
   width: 30px;
 }
+.sale{
+  position: absolute;
+  margin-left: 182px;
+  width: 100px;
+  height: 40px;
+  background-color: orange;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  
+}
+
+
+

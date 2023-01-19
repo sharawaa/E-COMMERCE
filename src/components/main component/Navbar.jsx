@@ -17,9 +17,9 @@ export default function Navbar() {
   }
   // console.log(Input);
   return (
-    <>
+    <div className="container">
       <div className="navContainer">
-        <section>
+        <section className="imgNav">
           <img src="./Popular products.png" alt="" />
         </section>
 
@@ -54,6 +54,6 @@ export default function Navbar() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

@@ -10,12 +10,13 @@ export default function Product(props) {
 
   return (
     <div className="productContainer">
-      <Card className="card" onClick={pop}>
-        <Card.Img variant="top" className="cardImg" src={props.image} />
+      <Card id="card"  onClick={pop}>
+        <div className="sale">{props.sale}%</div>
+        <Card.Img variant="top"  id="cardImg" src={props.image} />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
-          <Card.Text>{props.sale}%</Card.Text>
           <Card.Text>{props.price}$</Card.Text>
+          <h2>{Math.floor(props.price-(((props.price)*(props.sale))/100))}$</h2>
           <Button variant="warning" style={{}}>
             <img
               className="icon"

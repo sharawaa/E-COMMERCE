@@ -3,7 +3,7 @@ import { Route, useNavigate } from "react-router-dom";
 import "../../Style/header.css";
 
 export default function Header(prop) {
-  const { setIsLoggedIn } = prop;
+  const { isLoggedIn } = prop;
   const navigate = useNavigate();
   const [val, setVal] = useState("");
   function qwe() {
@@ -11,7 +11,7 @@ export default function Header(prop) {
   }
   return (
     <div className="header">
-      <div className="container">
+      <div className="HeaderCont container">
         <img src="./E-logo (1).png" alt="#" />
 
         <section>
@@ -22,15 +22,27 @@ export default function Header(prop) {
         </section>
 
         <section style={{ display: "flex" }}>
-          <a href="##">
-            <img
-              src="https://cdn2.iconfinder.com/data/icons/user-interface-169/32/about-512.png"
-              alt="#"
-            />
-          </a>
-          <a href="login" id="signIn">
-            sign in
-          </a>
+          {prop.isLoggedIn ? (<div>
+            <a href="##">
+              <img
+                src="https://cdn2.iconfinder.com/data/icons/user-interface-169/32/about-512.png"
+                alt="#"
+              />
+            </a>
+            <a href="profile" id="profile">
+              Profile
+            </a>
+            <a href="/">Log out</a>
+          </div>):(<div>
+           
+            <a href="login" id="signIn">
+              sign in
+            </a>
+          </div>)}
+          
+
+
+          
           <a href="##">
             <img
               src="https://cdn0.iconfinder.com/data/icons/finance-e-commerce/53/cart-shoping-trolly-plain-128.png"
@@ -39,15 +51,7 @@ export default function Header(prop) {
           </a>
 
           <p className="shopingP">+0</p>
-          <button
-            type="button"
-            href="/"
-            class="btn btn-light"
-            style={{ marginLeft: "30px" }}
-            onClick={() => setIsLoggedIn(false)}
-          >
-            Log out
-          </button>
+          
         </section>
       </div>
     </div>

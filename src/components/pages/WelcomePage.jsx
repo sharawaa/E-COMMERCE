@@ -10,8 +10,8 @@ export default function WelcomePage(prop) {
   const [password1, setPassword] = useState("");
   function login() {
     console.log(userName1);
-    loginHandler(userName1, password1);
-    navigate("/");
+     loginHandler(userName1, password1);
+     navigate("/");
   }
 
   return (
@@ -29,7 +29,7 @@ export default function WelcomePage(prop) {
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="button" onClick={login}>
+        <button className="button" onClick={() => login(userName1, password1)}>
           Log in
         </button>
       </div>

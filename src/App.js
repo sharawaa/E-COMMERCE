@@ -1,7 +1,7 @@
 //import { useState } from "react";
 import PageBrowser from "./components/pages/PageBrowser";
 import WelcomePage from "./components/pages/WelcomePage";
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import {  Route, Routes, useNavigate } from "react-router-dom";
 import ProductCard from "./components/pages/ProductCard";
 import Searchs from "./components/pages/Searchs";
 import { useState } from "react";
@@ -12,14 +12,14 @@ function App() {
 
   const Navigate = useNavigate();
 
-  function loginHandler(userName, password) {
+  function loginHandler(userName, userPassword) {
     console.log("login handler is running");
     console.log("username:", userName);
-    console.log("password:", password);
+    console.log("password:", userPassword);
     users.map((user) => {
-      if (userName === user.userName && password === user.password) {
-        Navigate("/");
+      if (userName === user.userName && userPassword === user.password) {
         setIsLoggedIn(true);
+        Navigate("/");
       } else {
         console.error("wrong password or user name");
       }

@@ -14,22 +14,26 @@
 }
 .firstSlide {
   width: 1460px;
+  
 }
 
 .firstImage {
   display: block;
   width: 379px;
   height: 408px;
+  margin-left: 150px;
 }
 
 .firstH3 {
   display: block;
   margin-bottom: 20px;
   color: rgb(255, 255, 255);
+  margin-left: 150px;
 }
 .firstH2 {
   margin-bottom: 150px;
   color: rgb(255, 255, 255);
+  margin-left: 150px;
 }
 .shopButton {
   background-color: #ff8957;
@@ -37,6 +41,7 @@
   width: 144px;
   height: 61px;
   color: white;
+  margin-left: 250px;
 }
 .viewButton {
   background-color: white;
@@ -45,4 +50,5 @@
   height: 61px;
   color: black;
   margin-left: 40px;
+  margin-left: 150px;
 }
