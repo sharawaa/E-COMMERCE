@@ -22,27 +22,25 @@ export default function Header(prop) {
         </section>
 
         <section style={{ display: "flex" }}>
-          {prop.isLoggedIn ? (<div>
-            <a href="##">
-              <img
-                src="https://cdn2.iconfinder.com/data/icons/user-interface-169/32/about-512.png"
-                alt="#"
-              />
-            </a>
-            <a href="profile" id="profile">
-              Profile
-            </a>
-            <a href="/">Log out</a>
-          </div>):(<div>
-           
-            <a href="login" id="signIn">
-              sign in
-            </a>
-          </div>)}
-          
+          {isLoggedIn ? (
+            <div>
+              <a href="/profile">
+                <img
+                  src="https://cdn2.iconfinder.com/data/icons/user-interface-169/32/about-512.png"
+                  alt="#"
+                />
+              </a>
 
+              <a href="/">Log out</a>
+            </div>
+          ) : (
+            <div>
+              <a href="login" id="signIn">
+                sign in
+              </a>
+            </div>
+          )}
 
-          
           <a href="##">
             <img
               src="https://cdn0.iconfinder.com/data/icons/finance-e-commerce/53/cart-shoping-trolly-plain-128.png"
@@ -51,7 +49,6 @@ export default function Header(prop) {
           </a>
 
           <p className="shopingP">+0</p>
-          
         </section>
       </div>
     </div>

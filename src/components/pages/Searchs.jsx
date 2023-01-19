@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { DATA } from "../../util/data";
-import Header from "../Browser/Header";
+
 import Product from "../main component/Product";
 
 export default function Searchs() {
@@ -12,7 +12,6 @@ export default function Searchs() {
 
   return (
     <>
-      <Header />
       {dat.map((e) => (
         <Product
           title={e.name}

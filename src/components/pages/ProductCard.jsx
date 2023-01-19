@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { DATA } from "../../util/data";
-import Header from "../Browser/Header";
+
 import "../../Style/productCard.css";
 import { useState } from "react";
 
@@ -9,64 +9,51 @@ export default function ProductCard() {
   console.log(test.id);
 
   let data = DATA.filter((asd) => asd.id.includes(test.id));
-  const [x, setX]= useState(data[0].stock)
-function add(){
-  if(data[0].stock<x){
-  setX(x+1)}else{}
-}
-function min(){
-  if(data[0].stock<x){
-    setX(x-1)
-  }else{
-
+  const [x, setX] = useState(data[0].stock);
+  function add() {
+    if (data[0].stock < x) {
+      setX(x + 1);
+    } else {
+    }
   }
-
-}
-  
+  function min() {
+    if (data[0].stock < x) {
+      setX(x - 1);
+    } else {
+    }
+  }
 
   return (
     <div>
-      <Header />
       <div className="Pcardcont">
-
         <div className="imgContainer">
           <img src={data[0].image} alt="" />
         </div>
 
-
-
         <div className="information">
-
           <section className="PCardTop">
             <h1>{data[0].name}</h1>
-            <h2>{data[0].price}$</h2>
+            <s>{data[0].price}$</s>
             <p>Availability:</p>
             <p>{data[0].description}</p>
           </section>
           <section className="PCardMain">
-            <section style={{display: "flex"}} className="quanty">
+            <section style={{ display: "flex" }} className="quanty">
               <h5>Quantity:</h5>
               <button onClick={min}>-</button>
               {x}
               <button onClick={add}>+</button>
             </section>
 
-
             <section className="twoButton">
-
               <button>Add to cart</button>
-              <button>Buy it now</button>          
-              
+              <button>Buy it now</button>
             </section>
           </section>
           <section>
             <p>sku: 01133-9-9</p>
           </section>
-
         </div>
-
-
-
       </div>
     </div>
   );

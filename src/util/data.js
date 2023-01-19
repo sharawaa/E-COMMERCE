@@ -523,3 +523,35 @@ export const DATA = [
     category: "computers & tablets",
   },
 ];
+export const users = [
+  {
+    userName: "bataa",
+    password: "zxc",
+    role: "user",
+  },
+  {
+    userName: "dorjo",
+    password: "123",
+    role: "user",
+  },
+  {
+    userName: "suhee",
+    password: "iop",
+    role: "user",
+  },
+  {
+    userName: "suldee",
+    password: "qwe",
+    role: "user",
+  },
+  {
+    userName: "sharva",
+    password: "qwe",
+    role: "admin",
+  },
+  {
+    userName: "nagi",
+    password: "asd",
+    role: "admin",
+  },
+];

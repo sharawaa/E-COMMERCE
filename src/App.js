@@ -1,10 +1,16 @@
 //import { useState } from "react";
 import PageBrowser from "./components/pages/PageBrowser";
 import WelcomePage from "./components/pages/WelcomePage";
-import {  Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import ProductCard from "./components/pages/ProductCard";
 import Searchs from "./components/pages/Searchs";
 import { useState } from "react";
+import { users } from "./util/data";
+import Header from "./components/Browser/Header";
+import Profile from "./components/pages/Profile";
+import HeaderAdmin from "./components/pages/admin/HeaderAdmin";
+import AdminHome from "./components/pages/admin/AdminHome";
+import Main from "./components/Browser/Main";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -13,15 +19,15 @@ function App() {
   const Navigate = useNavigate();
 
   function loginHandler(userName, userPassword) {
-    console.log("login handler is running");
-    console.log("username:", userName);
-    console.log("password:", userPassword);
     users.map((user) => {
       if (userName === user.userName && userPassword === user.password) {
-        setIsLoggedIn(true);
-        Navigate("/");
-      } else {
-        console.error("wrong password or user name");
+        if (user.role === "admin") {
+          Navigate("/admin");
+          setIsLoggedIn(true);
+        } else {
+          Navigate("/");
+          setIsLoggedIn(true);
+        }
       }
     });
   }
@@ -29,10 +35,6 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<PageBrowser />} />
-
-        <Route path="/product/:id" element={<ProductCard />} />
-        <Route path="/search/:product" element={<Searchs />} />
         <Route
           path="/login"
           element={
@@ -43,34 +45,20 @@ function App() {
             />
           }
         />
-      </Routes>
 
-      {/* {isLoggedIn ? (
-        <PageBrowser setIsLoggedIn={setIsLoggedIn} />
-      ) : (
-        <WelcomePage setLogin={loginHandler} />
-      )} */}
+        <Route path="/" element={<PageBrowser isLoggedIn={isLoggedIn} />}>
+          <Route path="/" element={<Main />} />
+          <Route path="/product/:id" element={<ProductCard />} />
+          <Route path="/search/:product" element={<Searchs />} />
+          <Route path="/profile" element={<Profile />} />
+        </Route>
+
+        <Route path="/admin" element={<AdminHome />}>
+          admin{" "}
+        </Route>
+      </Routes>
     </div>
   );
 }
-
-const users = [
-  {
-    userName: "bataa",
-    password: "zxc",
-  },
-  {
-    userName: "sharva",
-    password: "123",
-  },
-  {
-    userName: "suhee",
-    password: "iop",
-  },
-  {
-    userName: "suldee",
-    password: "qwe",
-  },
-];
 
 export default App;
