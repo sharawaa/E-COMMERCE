@@ -12,6 +12,13 @@ import Profile from "./components/pages/Profile";
 import AdminHome from "./components/pages/admin/AdminHome";
 import Main from "./components/Browser/Main";
 import Login from "./components/pages/Login";
+import Settings from "./components/pages/admin/adminPages/Settings";
+import Control from "./components/pages/admin/adminPages/Control";
+import AdminUsers from "./components/pages/admin/adminPages/AdminUsers";
+import Moderator from "./components/pages/admin/adminPages/Moderator";
+import Product from "./components/main component/Product";
+import AdminProduct from "./components/pages/admin/adminPages/AdminProduct";
+import Orders from "./components/pages/admin/adminPages/Orders";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -39,11 +46,7 @@ function App() {
         <Route
           path="/login"
           element={
-            <Login
-              users={data}
-              setData={setData}
-              loginHandler={loginHandler}
-            />
+            <Login users={data} setData={setData} loginHandler={loginHandler} />
           }
         />
 
@@ -55,7 +58,12 @@ function App() {
         </Route>
 
         <Route path="/admin" element={<AdminHome />}>
-          admin{" "}
+          <Route path="/admin/control" element={<Control />} />
+          <Route path="admin/product" element={<AdminProduct />} />
+          <Route path="admin/order" element={<Orders />} />
+          <Route path="/admin/users" element={<AdminUsers />} />
+          <Route path="/admin/moderator" element={<Moderator />} />
+          <Route path="/admin/settings" element={<Settings />} />
         </Route>
       </Routes>
     </div>
