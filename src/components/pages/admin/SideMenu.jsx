@@ -18,7 +18,7 @@ export default function SideMenu() {
         <button
           className="sideBtn"
           onClick={() => {
-            navigate("admin/product");
+            navigate("admin/products");
           }}
         >
           <img src="./monitor2.svg" alt="" /> Бүтээгдэхүүнүүд

@@ -525,14 +525,293 @@ export const DATA = [
 ];
 export const users = [
   {
-    userName: "99119911",
-    password: "123",
+    userName: "1",
+    password: "1",
     role: "admin",
   },
   {
-    userName: "88118811",
-    password: "123",
+    userName: "2",
+    password: "2",
     role: "user",
   },
   
 ];
+
+export const products = [
+  {
+    image: "Samsung VT3445",
+    productName: "Samsung VT3445",
+    price: "₮1,455,900",
+    sale: "0",
+    category: "ГАЛ ТОГОО",
+    remainder: "12",
+  },
+  {
+    image: "Samsung VT3445",
+    productName: "Samsung VT3445",
+    price: "₮1,455,900",
+    sale: "0",
+    category: "ГАЛ ТОГОО",
+    remainder: "12",
+  },
+  {
+    image: "Samsung VT3445",
+    productName: "Samsung VT3445",
+    price: "₮1,455,900",
+    sale: "0",
+    category: "ГАЛ ТОГОО",
+    remainder: "12",
+  },
+  {
+    image: "Samsung VT3445",
+    productName: "Samsung VT3445",
+    price: "₮1,455,900",
+    sale: "0",
+    category: "ГАЛ ТОГОО",
+    remainder: "12",
+  },
+  {
+    image: "Samsung VT3445",
+    productName: "Samsung VT3445",
+    price: "₮1,455,900",
+    sale: "0",
+    category: "ГАЛ ТОГОО",
+    remainder: "12",
+  },
+  {
+    image: "Samsung VT3445",
+    productName: "Samsung VT3445",
+    price: "₮1,455,900",
+    sale: "0",
+    category: "ГАЛ ТОГОО",
+    remainder: "12",
+  },
+  {
+    image: "Samsung VT3445",
+    productName: "Samsung VT3445",
+    price: "₮1,455,900",
+    sale: "0",
+    category: "ГАЛ ТОГОО",
+    remainder: "12",
+  },
+  {
+    image: "Samsung VT3445",
+    productName: "Samsung VT3445",
+    price: "₮1,455,900",
+    sale: "0",
+    category: "ГАЛ ТОГОО",
+    remainder: "12",
+  },
+  {
+    image: "Samsung VT3445",
+    productName: "Samsung VT3445",
+    price: "₮1,455,900",
+    sale: "0",
+    category: "ГАЛ ТОГОО",
+    remainder: "12",
+  },
+  
+];
+
+
+export const USERS =[
+  {
+    id: "12345",
+    name: "Cарангэрэл",
+    phone: "#15358",
+    date: "2022/02/02",
+    order: "3",
+    sureName: "Батравдан",
+    email: "sra11schi@example.com",
+
+  },
+  {
+    id: "12345",
+    name: "Cарангэрэл",
+    phone: "#15358",
+    date: "2022/02/02",
+    order: "3",
+    sureName: "Батравдан",
+    email: "sra11schi@example.com",
+
+  },
+  {
+    id: "12345",
+    name: "Cарангэрэл",
+    phone: "#15358",
+    date: "2022/02/02",
+    order: "3",
+    sureName: "Батравдан",
+    email: "sra11schi@example.com",
+
+  },
+  {
+    id: "12345",
+    name: "Cарангэрэл",
+    phone: "#15358",
+    date: "2022/02/02",
+    order: "3",
+    sureName: "Батравдан",
+    email: "sra11schi@example.com",
+
+  },
+  {
+    id: "12345",
+    name: "Cарангэрэл",
+    phone: "#15358",
+    date: "2022/02/02",
+    order: "3",
+    sureName: "Батравдан",
+    email: "sra11schi@example.com",
+
+  },
+  {
+    id: "12345",
+    name: "Cарангэрэл",
+    phone: "#15358",
+    date: "2022/02/02",
+    order: "3",
+    sureName: "Батравдан",
+    email: "sra11schi@example.com",
+
+  },
+];
+export const moderator=[
+  {
+    moderator:"#1234",
+    sureName: "Батравдан",
+    name: "Cарангэрэл",
+    eMail: "sra11schi@example.com",
+    phone: "80795262",
+    goodsSold: "2",
+    date: "2022/02/02",
+
+  },
+  {
+    moderator:"#1234",
+    sureName: "Батравдан",
+    name: "Cарангэрэл",
+    eMail: "sra11schi@example.com",
+    phone: "80795262",
+    goodsSold: "2",
+    date: "2022/02/02",
+
+  },
+  {
+    moderator:"#1234",
+    sureName: "Батравдан",
+    name: "Cарангэрэл",
+    eMail: "sra11schi@example.com",
+    phone: "80795262",
+    goodsSold: "2",
+    date: "2022/02/02",
+
+  },
+  {
+    moderator:"#1234",
+    sureName: "Батравдан",
+    name: "Cарангэрэл",
+    eMail: "sra11schi@example.com",
+    phone: "80795262",
+    goodsSold: "2",
+    date: "2022/02/02",
+
+  },
+  {
+    moderator:"#1234",
+    sureName: "Батравдан",
+    name: "Cарангэрэл",
+    eMail: "sra11schi@example.com",
+    phone: "80795262",
+    goodsSold: "2",
+    date: "2022/02/02",
+
+  },
+  {
+    moderator:"#1234",
+    sureName: "Батравдан",
+    name: "Cарангэрэл",
+    eMail: "sra11schi@example.com",
+    phone: "80795262",
+    goodsSold: "2",
+    date: "2022/02/02",
+
+  },
+  {
+    moderator:"#1234",
+    sureName: "Батравдан",
+    name: "Cарангэрэл",
+    eMail: "sra11schi@example.com",
+    phone: "80795262",
+    goodsSold: "2",
+    date: "2022/02/02",
+
+  },
+  {
+    moderator:"#1234",
+    sureName: "Батравдан",
+    name: "Cарангэрэл",
+    eMail: "sra11schi@example.com",
+    phone: "80795262",
+    goodsSold: "2",
+    date: "2022/02/02",
+
+  },
+];
+export const orders =[
+  {
+    no: "#15358",
+    date: "2022.12.02",
+    phone:"80395252",
+    eMail: "sra11schi...",
+    address: "ХУД 4-р х...",
+    number: "2",
+    totalAmount:"1,477,500",
+    payment: "Картаар",
+    status: "Идэвхитэй",
+  },
+  {
+    no: "#15358",
+    date: "2022.12.02",
+    phone:"80395252",
+    eMail: "sra11schi...",
+    address: "ХУД 4-р х...",
+    number: "2",
+    totalAmount:"1,477,500",
+    payment: "Картаар",
+    status: "Идэвхитэй",
+  },
+  {
+    no: "#15358",
+    date: "2022.12.02",
+    phone:"80395252",
+    eMail: "sra11schi...",
+    address: "ХУД 4-р х...",
+    number: "2",
+    totalAmount:"1,477,500",
+    payment: "Картаар",
+    status: "Идэвхитэй",
+  },
+  {
+    no: "#15358",
+    date: "2022.12.02",
+    phone:"80395252",
+    eMail: "sra11schi...",
+    address: "ХУД 4-р х...",
+    number: "2",
+    totalAmount:"1,477,500",
+    payment: "Картаар",
+    status: "Идэвхитэй",
+  },
+  {
+    no: "#15358",
+    date: "2022.12.02",
+    phone:"80395252",
+    eMail: "sra11schi...",
+    address: "ХУД 4-р х...",
+    number: "2",
+    totalAmount:"1,477,500",
+    payment: "Картаар",
+    status: "Идэвхитэй",
+  },
+]

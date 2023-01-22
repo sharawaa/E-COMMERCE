@@ -16,9 +16,10 @@ import Settings from "./components/pages/admin/adminPages/Settings";
 import Control from "./components/pages/admin/adminPages/Control";
 import AdminUsers from "./components/pages/admin/adminPages/AdminUsers";
 import Moderator from "./components/pages/admin/adminPages/Moderator";
-import Product from "./components/main component/Product";
-import AdminProduct from "./components/pages/admin/adminPages/AdminProduct";
+
+
 import Orders from "./components/pages/admin/adminPages/Orders";
+import AdminProducts from "./components/pages/admin/adminPages/AdminProducts";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -50,7 +51,7 @@ function App() {
           }
         />
 
-        <Route path="/" element={<PageBrowser isLoggedIn={isLoggedIn} />}>
+          <Route path="/" element={<PageBrowser isLoggedIn={isLoggedIn} />}>
           <Route path="/" element={<Main />} />
           <Route path="/product/:id" element={<ProductCard />} />
           <Route path="/search/:product" element={<Searchs />} />
@@ -59,7 +60,7 @@ function App() {
 
         <Route path="/admin" element={<AdminHome />}>
           <Route path="/admin/control" element={<Control />} />
-          <Route path="admin/product" element={<AdminProduct />} />
+          <Route path="admin/products" element={<AdminProducts />} />
           <Route path="admin/order" element={<Orders />} />
           <Route path="/admin/users" element={<AdminUsers />} />
           <Route path="/admin/moderator" element={<Moderator />} />

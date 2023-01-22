@@ -22,3 +22,37 @@
     color: white;
 
 }
+.CloseModal{
+    width: 480px;
+    height: 260px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.trust{
+    
+    font-size: 20px;
+    font-style: oblique;
+}
+.yes{
+    border: none;
+    width: 220px;
+    height: 46px;
+    background-color: #003585;
+    margin-right: 5px;
+    color: white;
+    border: 5px;
+
+}
+
+.no{
+    border: navajowhite;
+    width: 220px;
+    height: 46px;
+    background-color: 
+    #D2D2D2;
+    color: white;
+    margin-left: 5px;
+    border-radius: 5px;
+}
