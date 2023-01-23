@@ -17,7 +17,7 @@ export default function Footer() {
         }}
       >
         <section>
-          <img src="logo 1 (1).png" alt="#" />
+          <img src="image/logo 1 (1).png" alt="#" />
         </section>
 
         <section>

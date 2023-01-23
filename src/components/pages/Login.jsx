@@ -18,7 +18,7 @@ export default function Login(prop) {
     <div className="ContainerW ">
       <div className="cards">
         <section className="userCont">
-          <img src="./Logo.png" alt="" />
+          <img src="./image/Logo.png" alt="" />
           <input
             className="input1"
             type="text"
@@ -42,7 +42,6 @@ export default function Login(prop) {
           <button className="button2">Бүртгүүлэх</button>
         </section>
       </div>
-      
     </div>
   );
 }

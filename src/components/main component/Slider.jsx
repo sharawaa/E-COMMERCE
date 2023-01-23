@@ -6,7 +6,11 @@ function UncontrolledExample() {
       <div className="sliderContainer">
         <Carousel>
           <Carousel.Item interval={3000} className="firstSlide">
-            <img className="firstImage" src="./Group 8.png" alt="First slide" />
+            <img
+              className="firstImage"
+              src="./image/Group 8.png"
+              alt="First slide"
+            />
             <Carousel.Caption className="textSlide">
               <section className="title">
                 <h1 className=" firstH3">Canon</h1>
@@ -20,7 +24,11 @@ function UncontrolledExample() {
           </Carousel.Item>
 
           <Carousel.Item interval={3000}>
-            <img className="firstImage" src="Frame 29.png" alt="First slide" />
+            <img
+              className="firstImage"
+              src="image/Frame 29.png"
+              alt="First slide"
+            />
             <Carousel.Caption className="textSlide">
               <section className="title">
                 <h1 className=" firstH3">Bose</h1>
@@ -36,7 +44,7 @@ function UncontrolledExample() {
           <Carousel.Item interval={3000}>
             <img
               className="firstImage"
-              src="./Frame 29 (1).png"
+              src="./image/Frame 29 (1).png"
               alt="First slide"
             />
             <Carousel.Caption className="textSlide">

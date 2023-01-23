@@ -20,7 +20,7 @@ export default function Navbar() {
     <div className="container">
       <div className="navContainer">
         <section className="imgNav">
-          <img src="./Popular products.png" alt="" />
+          <img src="./image/Popular products.png" alt="" />
         </section>
 
         <section>
