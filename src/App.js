@@ -5,15 +5,9 @@ import Searchs from "./components/pages/Searchs";
 import { useState } from "react";
 import { users } from "./util/data";
 import Profile from "./components/pages/Profile";
-import AdminHome from "./components/pages/admin/AdminHome";
+
 import Main from "./components/Browser/Main";
 import Login from "./components/pages/Login";
-import Settings from "./components/pages/admin/adminPages/Settings";
-import Control from "./components/pages/admin/adminPages/Control";
-import AdminUsers from "./components/pages/admin/adminPages/AdminUsers";
-import Moderator from "./components/pages/admin/adminPages/Moderator";
-import Orders from "./components/pages/admin/adminPages/Orders";
-import AdminProducts from "./components/pages/admin/adminPages/AdminProducts";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -24,8 +18,8 @@ function App() {
   function loginHandler(userName, userPassword) {
     users.map((user) => {
       if (userName === user.userName && userPassword === user.password) {
-        if (user.role === "admin") {
-          navigate("/admin");
+        if (user.role === "user") {
+          navigate("/");
           setIsLoggedIn(true);
         } else {
           navigate("/");
@@ -50,14 +44,6 @@ function App() {
           <Route path="/product/:id" element={<ProductCard />} />
           <Route path="/search/:product" element={<Searchs />} />
           <Route path="/profile" element={<Profile />} />
-        </Route>
-        <Route path="/admin" element={<AdminHome />}>
-          <Route path="/admin/control" element={<Control />} />
-          <Route path="admin/products" element={<AdminProducts />} />
-          <Route path="admin/order" element={<Orders />} />
-          <Route path="/admin/users" element={<AdminUsers />} />
-          <Route path="/admin/moderator" element={<Moderator />} />
-          <Route path="/admin/settings" element={<Settings />} />
         </Route>
       </Routes>
     </div>

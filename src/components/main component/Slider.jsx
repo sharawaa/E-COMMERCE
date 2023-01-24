@@ -4,7 +4,7 @@ function UncontrolledExample() {
   return (
     <div className="bigSlider">
       <div className="sliderContainer">
-        <Carousel>
+        <Carousel className="carousel">
           <Carousel.Item interval={3000} className="firstSlide">
             <img
               className="firstImage"

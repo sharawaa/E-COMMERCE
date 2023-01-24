@@ -16,14 +16,13 @@ export default function ProductCard() {
     } else {
     }
   }
-  function min(){
-setX(x - 1);
-
+  function min() {
+    setX(x - 1);
   }
 
   return (
-    <div>
-      <div className="Pcardcont">
+    <div className="card-container">
+      <div className="prod-card">
         <div className="imgContainer">
           <img src={data[0].image} alt="" />
         </div>

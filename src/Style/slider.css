@@ -1,37 +1,41 @@
 .bigSlider {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   background-color: rgb(19, 52, 128);
 }
-
+.sliderContainer {
+  max-width: 1200px;
+}
 
 .firstSlide {
   width: 1460px;
-  
 }
-.textSlide{
-  margin-left: 500px;
-
+.textSlide {
+  margin-left: 300px;
 }
-
 
 .firstImage {
   display: block;
-  width: 379px;
+  width: 400px;
   height: 408px;
-  margin-left: 300px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+}
+.firstH2 {
+  margin-bottom: 100px;
+  color: rgb(255, 255, 255);
 }
 
 .firstH3 {
   display: block;
   margin-bottom: 20px;
   color: rgb(255, 255, 255);
-  
-}
-.firstH2 {
-  margin-bottom: 150px;
-  color: rgb(255, 255, 255);
-  
 }
 .shopButton {
   background-color: #ff8957;
@@ -39,7 +43,8 @@
   width: 144px;
   height: 61px;
   color: white;
-  
+  border: none;
+  margin: 20px;
 }
 .viewButton {
   background-color: white;
@@ -47,6 +52,6 @@
   width: 144px;
   height: 61px;
   color: black;
-  margin-left: 40px;
-  margin-left: 100px;
+  border: none;
+  margin: 20px;
 }

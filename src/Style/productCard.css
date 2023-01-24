@@ -1,6 +1,12 @@
-.Pcardcont {
+.card-container {
+  width: 100%;
   display: flex;
-  align-content: space-around;
+  align-items: center;
+}
+
+.prod-card {
+  display: flex;
+  align-content: space-between;
 }
 
 .imgContainer {
@@ -18,21 +24,21 @@
 .information {
   width: 40%;
 }
-.PCardTop{
-  border-bottom: solid 1px #BDBDBD;
+.PCardTop {
+  border-bottom: solid 1px #bdbdbd;
 }
 
-.PCardMain{
-  border-bottom: solid 1px #BDBDBD;
+.PCardMain {
+  border-bottom: solid 1px #bdbdbd;
 }
-.quanty{
+.quanty {
   margin: 50px 0px;
 }
-.twoButton button{
+.twoButton button {
   width: 240px;
   height: 70px;
   border-radius: 32px;
-  background-color: #EDA415;
+  background-color: #eda415;
   color: white;
   border: none;
   font-size: 22px;
