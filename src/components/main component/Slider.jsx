@@ -31,8 +31,8 @@ function UncontrolledExample() {
             />
             <Carousel.Caption className="textSlide">
               <section className="title">
-                <h1 className=" firstH3">Bose</h1>
-                <h2 className="firstH2">headphones</h2>
+                <h1 className=" firstH2">Bose</h1>
+                <h2 className="firstH3">headphones</h2>
                 <section>
                   <button className="shopButton">Shop now</button>
                   <button className="viewButton">View more</button>
