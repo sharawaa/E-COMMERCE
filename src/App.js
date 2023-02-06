@@ -2,18 +2,28 @@ import PageBrowser from "./components/pages/PageBrowser";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import ProductCard from "./components/pages/ProductCard";
 import Searchs from "./components/pages/Searchs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { users } from "./util/data";
 import Profile from "./components/pages/Profile";
-
+import axios from "axios";
 import Main from "./components/Browser/Main";
 import Login from "./components/pages/Login";
 
 function App() {
+
+  const [products, setProducts] = useState();
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [data, setData] = useState(false);
+const navigate = useNavigate();
+/* datagaa oruulj irjiine*/
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:2022/products")
+  //     .then((products) => setProducts(products.data));
+  // }, []);
+console.log("products:",products)
 
-  const navigate = useNavigate();
 
   function loginHandler(userName, userPassword) {
     users.map((user) => {
@@ -41,7 +51,7 @@ function App() {
 
         <Route path="/" element={<PageBrowser isLoggedIn={isLoggedIn} />}>
           <Route path="/" element={<Main />} />
-          <Route path="/product/:id" element={<ProductCard />} />
+          <Route path="/product/:id" element={<ProductCard products={products}/>} />
           <Route path="/search/:product" element={<Searchs />} />
           <Route path="/profile" element={<Profile />} />
         </Route>

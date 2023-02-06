@@ -4,12 +4,14 @@ import { DATA } from "../../util/data";
 import "../../Style/productCard.css";
 import { useState } from "react";
 
-export default function ProductCard() {
+export default function ProductCard(prop) {
+  const {products} ={prop}
   const test = useParams();
   console.log(test.id);
 
   let data = DATA.filter((asd) => asd.id.includes(test.id));
   const [x, setX] = useState(data[0].stock);
+  console.log("product data orj irjuu",products)
   function add() {
     if (x) {
       setX(x + 1);
@@ -19,7 +21,6 @@ export default function ProductCard() {
   function min() {
     setX(x - 1);
   }
-
   return (
     <div className="card-container">
       <div className="prod-card">
