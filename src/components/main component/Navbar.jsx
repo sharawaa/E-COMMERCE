@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../../Style/nav.css";
 //import { DATA } from "../../util/data";
 import Product from "./Product";
-
+import { ProductContext } from "../../App";
 export default function Navbar(props) {
-  const {products} = props
+  const { products, setProducts } = useContext(ProductContext);
+  //const { products } = props;
   const [Input, setInput] = useState(products);
   function sharva(e) {
     if (e.target.innerText === "All") {
@@ -44,7 +45,7 @@ export default function Navbar(props) {
       </div>
 
       <div className="products">
-        {Input.map((unit) => (
+        {Input.map((unit, index) => (
           <Product
             title={unit.name}
             image={unit.image}
