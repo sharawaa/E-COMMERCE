@@ -7,11 +7,12 @@ import Bottom from "../m-bottom/Bottom";
 import Aside from "../m-bottom/Aside";
 import Product from "../main component/Product";
 
-export default function Main() {
+export default function Main(props) {
+  const {products} =props;
   return (
     <div class="Container">
       <Slider />
-      <Navbar />
+      <Navbar products={products}/>
       <section className="product">
         <Product />
       </section>

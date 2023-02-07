@@ -9,9 +9,9 @@ export default function ProductCard(prop) {
   const test = useParams();
   console.log(test.id);
 
-  let data = DATA.filter((asd) => asd.id.includes(test.id));
+  let data = products.filter((asd) => asd.id.includes(test.id));
   const [x, setX] = useState(data[0].stock);
-  console.log("product data orj irjuu",products)
+  
   function add() {
     if (x) {
       setX(x + 1);

@@ -1,15 +1,16 @@
 import { useState } from "react";
 import "../../Style/nav.css";
-import { DATA } from "../../util/data";
+//import { DATA } from "../../util/data";
 import Product from "./Product";
 
-export default function Navbar() {
-  const [Input, setInput] = useState(DATA);
+export default function Navbar(props) {
+  const {products} = props
+  const [Input, setInput] = useState(products);
   function sharva(e) {
     if (e.target.innerText === "All") {
-      setInput(DATA);
+      setInput(products);
     } else {
-      let hoho = DATA.filter(
+      let hoho = products.filter(
         (product) => product.category === e.target.innerText
       );
       setInput(hoho);

@@ -1,13 +1,14 @@
 import { useParams } from "react-router-dom";
-import { DATA } from "../../util/data";
+//import { DATA } from "../../util/data";
 import "../../Style/search.css"
 
 import Product from "../main component/Product";
 
-export default function Searchs() {
+export default function Searchs(props) {
   const test = useParams();
+  const {products} = props;
 
-  let dat = DATA.filter((a) =>
+  let dat = products.filter((a) =>
     a.name.toLowerCase().includes(test.product.toLowerCase())
   );
 

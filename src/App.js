@@ -17,12 +17,12 @@ function App() {
   const [data, setData] = useState(false);
 const navigate = useNavigate();
 /* datagaa oruulj irjiine*/
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:2022/products")
-  //     .then((products) => setProducts(products.data));
-  // }, []);
-console.log("products:",products)
+
+useEffect(() => {
+  axios
+    .get("http://localhost:2022/products")
+    .then((products) => setProducts(products.data));
+}, []);
 
 
   function loginHandler(userName, userPassword) {
@@ -50,9 +50,9 @@ console.log("products:",products)
         />
 
         <Route path="/" element={<PageBrowser isLoggedIn={isLoggedIn} />}>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Main products={products}/>} />
           <Route path="/product/:id" element={<ProductCard products={products}/>} />
-          <Route path="/search/:product" element={<Searchs />} />
+          <Route path="/search/:product" element={<Searchs products={products}/>} />
           <Route path="/profile" element={<Profile />} />
         </Route>
       </Routes>
