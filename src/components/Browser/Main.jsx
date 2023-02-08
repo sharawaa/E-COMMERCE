@@ -8,11 +8,11 @@ import Aside from "../m-bottom/Aside";
 import Product from "../main component/Product";
 
 export default function Main(props) {
-  const {products} =props;
+  const { products } = props;
   return (
-    <div class="Container">
+    <div className="Container">
       <Slider />
-      <Navbar products={products}/>
+      <Navbar products={products} />
       <section className="product">
         <Product />
       </section>

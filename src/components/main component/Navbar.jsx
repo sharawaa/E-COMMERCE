@@ -5,16 +5,15 @@ import Product from "./Product";
 import { ProductContext } from "../../App";
 export default function Navbar(props) {
   const { products, setProducts } = useContext(ProductContext);
-  //const { products } = props;
-  const [Input, setInput] = useState(products);
+  //const [Input, setInput] = useState(products);
   function sharva(e) {
     if (e.target.innerText === "All") {
-      setInput(products);
+      setProducts(products);
     } else {
       let hoho = products.filter(
         (product) => product.category === e.target.innerText
       );
-      setInput(hoho);
+      setProducts(hoho);
     }
   }
   // console.log(Input);
@@ -45,8 +44,9 @@ export default function Navbar(props) {
       </div>
 
       <div className="products">
-        {Input.map((unit, index) => (
+        {products.map((unit, index) => (
           <Product
+            key={index}
             title={unit.name}
             image={unit.image}
             description={unit.description}
