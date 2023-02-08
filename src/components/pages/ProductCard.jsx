@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { DATA } from "../../util/data";
+//import { DATA } from "../../util/data";
 
 import "../../Style/productCard.css";
 import { useState } from "react";
