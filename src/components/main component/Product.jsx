@@ -2,6 +2,7 @@ import "../../Style/product.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
+
 export default function Product(props) {
   const navigate = useNavigate();
   function pop() {
@@ -11,7 +12,9 @@ export default function Product(props) {
   return (
     <div className="productContainer">
       <Card id="card" onClick={pop}>
-        <div className="sale"><p>{props.sale}%</p></div>
+        <div className="sale">
+          <p>{props.sale}%</p>
+        </div>
         <Card.Img variant="top" id="cardImg" src={props.image} />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>

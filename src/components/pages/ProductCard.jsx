@@ -2,16 +2,18 @@ import { useNavigate, useParams } from "react-router-dom";
 //import { DATA } from "../../util/data";
 
 import "../../Style/productCard.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ProductContext } from "../../App";
 
-export default function ProductCard(prop) {
-  const {products} ={prop}
+export default function ProductCard() {
+  const { products } = useContext(ProductContext);
   const test = useParams();
-  console.log(test.id);
+  console.log("productCatrd id", products);
 
-  let data = products.filter((asd) => asd.id.includes(test.id));
+  let data = products.filter((asd) => asd.id === test.id);
   const [x, setX] = useState(data[0].stock);
-  
+  console.log("productCatrd data", data);
+
   function add() {
     if (x) {
       setX(x + 1);

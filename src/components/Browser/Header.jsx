@@ -45,10 +45,7 @@ export default function Header(prop) {
             </a>
           )}
 
-          <a href="##">
-            {/*  */}
-            <Backed />
-          </a>
+          <Backed />
 
           <p className="shopingP">+0</p>
         </section>

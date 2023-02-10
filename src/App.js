@@ -41,9 +41,7 @@ function App() {
 
   return (
     <div>
-      <ProductContext.Provider
-        value={{ products: products, setProducts: setProducts }}
-      >
+      <ProductContext.Provider value={{ products, setProducts }}>
         <Routes>
           <Route
             path="/login"
@@ -58,10 +56,7 @@ function App() {
 
           <Route path="/" element={<PageBrowser isLoggedIn={isLoggedIn} />}>
             <Route path="/" element={<Main products={products} />} />
-            <Route
-              path="/product/:id"
-              element={<ProductCard products={products} />}
-            />
+            <Route path="/product/:id" element={<ProductCard />} />
             <Route
               path="/search/:product"
               element={<Searchs products={products} />}

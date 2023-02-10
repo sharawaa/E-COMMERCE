@@ -3,17 +3,20 @@ import "../../Style/nav.css";
 //import { DATA } from "../../util/data";
 import Product from "./Product";
 import { ProductContext } from "../../App";
-export default function Navbar(props) {
-  const { products, setProducts } = useContext(ProductContext);
+export default function Navbar() {
+  const { products } = useContext(ProductContext);
+  const [filterProduct, setFilterProduct] = useState([]);
+
   //const [Input, setInput] = useState(products);
-  function sharva(e) {
+  function filterHandler(e) {
     if (e.target.innerText === "All") {
-      setProducts(products);
+      setFilterProduct(products);
     } else {
-      let hoho = products.filter(
-        (product) => product.category === e.target.innerText
-      );
-      setProducts(hoho);
+      let data =
+        products &&
+        products.filter((product) => product.category === e.target.innerText);
+      setFilterProduct(data);
+      console.log(e.target.innerText);
     }
   }
   // console.log(Input);
@@ -25,26 +28,26 @@ export default function Navbar(props) {
         </section>
 
         <section>
-          <button className="groupButton" onClick={sharva}>
+          <button className="groupButton" onClick={filterHandler}>
             All
           </button>
-          <button className="groupButton" onClick={sharva}>
+          <button className="groupButton" onClick={filterHandler}>
             appliances
           </button>
-          <button className="groupButton" onClick={sharva}>
+          <button className="groupButton" onClick={filterHandler}>
             computers & tablets
           </button>
-          <button className="groupButton" onClick={sharva}>
+          <button className="groupButton" onClick={filterHandler}>
             gaming console
           </button>
-          <button className="groupButton" onClick={sharva}>
+          <button className="groupButton" onClick={filterHandler}>
             telescope
           </button>
         </section>
       </div>
 
       <div className="products">
-        {products.map((unit, index) => (
+        {filterProduct.map((unit, index) => (
           <Product
             key={index}
             title={unit.name}
