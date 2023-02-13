@@ -1,41 +1,62 @@
-// import React, { useState } from "react";
-// import "../../Style/backed.css"
-// import Offcanvas from "react-bootstrap/Offcanvas";
-// import { useContext } from "react";
-// import { ProductContext } from "../../App";
+import React, { useState } from "react";
+import "../../Style/basked.css";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { useContext } from "react";
+import { ProductContext } from "../../App";
 
+export default function Basked() {
+  const { products } = useContext(ProductContext);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-// export default function Backed() {
-//   const {data} = useContext(ProductContext)
-//   const [show, setShow] = useState(false);
-//   const handleClose = () => setShow(false);
-//   const handleShow = () => setShow(true);
-// let basketItem = JSON.parse(localStorage.getItem("basket"));
+  let basketItem = JSON.parse(localStorage.getItem("baskets"));
 
-// let basketProduct= data && data.filter((hoho)=>basketItem.find((a)=> a.id===hoho.id))
-// console.log("basket prod" , basketProduct)
-  
-//   return (
-//     <>
-//       <a onClick={handleShow} href="##">
-//         <img src="./image/tereg.svg" alt="" />
-//       </a>
+  let basketProduct =
+    products &&
+    products.filter((product) =>
+      basketItem.find((findProduct) => findProduct.id === product.id)
+    );
+  //   console.log("basket prod", basketItem.stock);
+  //   let stock = basketItem.find((stock) => {
+  //     stock.stock;
+  //   });
+  console.log("stoook", basketItem[0].stock);
+  return (
+    <>
+      <a onClick={handleShow} href="##">
+        <img src="./image/tereg.svg" alt="" />
+      </a>
 
-//       <Offcanvas className="Offcanvas" placement="end" show={show} onHide={handleClose} >
-//         <Offcanvas.Header closeButton>
-//           <Offcanvas.Title>
-//             <div className="offTitle">
-//             <div>Таны сагс</div>
-//             <div><a href="##">Сагс хоослох</a></div>
-//             </div>
-//           </Offcanvas.Title>
-//         </Offcanvas.Header>
-//         <Offcanvas.Body>
-//           {basketProduct}
-         
-//         </Offcanvas.Body>
-//       <button className="orderButton">Захиалах</button>
-//       </Offcanvas>
-//     </>
-//   );
-// }
+      <Offcanvas
+        className="Offcanvas"
+        placement="end"
+        show={show}
+        onHide={handleClose}
+      >
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>
+            <div className="offTitle">
+              <div>Таны сагс</div>
+              <div>
+                <a href="##">Сагс хоослох</a>
+              </div>
+            </div>
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          {basketProduct.map((prod, index) => {
+            return (
+              <div key={index} className="basket-product">
+                <img className="basket-image" src={prod.image} alt="" />
+                <p>{prod.name}</p>
+                <p>quanty{basketItem && basketItem[index].stock}</p>
+              </div>
+            );
+          })}
+        </Offcanvas.Body>
+        <button className="orderButton">Захиалах</button>
+      </Offcanvas>
+    </>
+  );
+}

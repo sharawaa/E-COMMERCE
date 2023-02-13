@@ -1,0 +1,30 @@
+.Offcanvas {
+  width: 499px !important;
+}
+.offTitle {
+  width: 350px;
+  display: flex;
+
+  justify-content: space-between;
+}
+.orderButton {
+  width: 435px;
+  height: 61px;
+  font-size: 24px;
+  border: none;
+  background-color: #003585;
+  color: #fff;
+  border-radius: 16px;
+}
+
+.basket-product {
+  display: flex;
+  height: 117px;
+  width: 435px;
+  border: solid black 2px;
+  gap: 16px;
+}
+.basket-image {
+  width: 85px;
+  height: 85px;
+}
