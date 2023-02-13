@@ -523,19 +523,19 @@
 // //     category: "computers & tablets",
 // //   },
 //  ];
-export const users = [
-  {
-    userName: "1",
-    password: "1",
-    role: "admin",
-  },
-  {
-    userName: "2",
-    password: "2",
-    role: "user",
-  },
+// export const users = [
+//   {
+//     userName: "1",
+//     password: "1",
+//     role: "admin",
+//   },
+//   {
+//     userName: "2",
+//     password: "2",
+//     role: "user",
+//   },
   
-];
+// ];
 
 export const products = [
   {

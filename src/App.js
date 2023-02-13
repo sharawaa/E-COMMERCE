@@ -11,18 +11,22 @@ import Header from "./components/Browser/Header"
 
 export const ProductContext = createContext();
 function App() {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
-
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [data, setData] = useState(false);
-  const navigate = useNavigate();
   const [users, setUsers]=useState()
+
   /* datagaa oruulj irjiine*/
+
   useEffect(() => {
     axios
       .get("http://localhost:2022/users")
       .then((users) => setUsers(users.data));
   }, []);
+
+console.log("users",users)
+
 
   useEffect(() => {
     axios
@@ -30,7 +34,10 @@ function App() {
       .then((products) => setProducts(products.data));
   }, []);
 
+  
+  
   console.log("products shuu:", products);
+  
   function loginHandler(userName, userPassword) {
     users.map((user) => {
       if (userName === user.userName && userPassword === user.password) {
@@ -42,13 +49,14 @@ function App() {
           setIsLoggedIn(true);
         }
       }
+      console.log("user.name",user.userName , user.password)
     });
   }
 
   return (
     <div>
-      <ProductContext.Provider value={{ products, setProducts, users, setProducts }}>
-        <Header />
+      <ProductContext.Provider value={{ products,  setProducts }}>
+        <Header isLoggedIn={isLoggedIn}/>
         <Routes>
           <Route
             path="/login"
@@ -61,7 +69,7 @@ function App() {
             }
           />
 
-          <Route path="/" element={<PageBrowser isLoggedIn={isLoggedIn} />}>
+          <Route path="/" element={<PageBrowser  />}>
             <Route path="/" element={<Main products={products} />} />
             <Route path="/product/:id" element={<ProductCard />} />
             <Route

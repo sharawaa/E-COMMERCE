@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Style/login.css";
+import Register from "../main component/Register";
 
 export default function Login(prop) {
   const { setLogin } = prop;
@@ -39,7 +40,7 @@ export default function Login(prop) {
           </button>
           <p>----------------------------Эсвэл----------------------------</p>
 
-          <button className="button2">Бүртгүүлэх</button>
+          <Register />
         </section>
       </div>
     </div>
