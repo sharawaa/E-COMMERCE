@@ -1,5 +1,4 @@
 import "../../Style/product.css";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 
@@ -12,21 +11,31 @@ export default function Product(props) {
   return (
     <div className="productContainer">
       <Card id="card" onClick={pop}>
+      { props.sale ? 
         <div className="sale">
-          <p>{props.sale}%</p>
-        </div>
+          <p>Sale {props.sale}% off</p>
+        </div> : <p></p>}
         <Card.Img variant="top" id="cardImg" src={props.image} />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
-          <s>{props.price}$</s>
-          <h2>{Math.floor(props.price - (props.price * props.sale) / 100)}$</h2>
-          <Button variant="warning" style={{}}>
-            <img
-              className="icon"
-              src="https://cdn0.iconfinder.com/data/icons/finance-e-commerce/53/cart-shoping-trolly-plain-128.png"
-              alt=""
-            />
-          </Button>
+          <section className="cardBottom">
+            <section>
+             {props.sale ? <s>{props.price}$</s> : <p></p>}
+              <h2>{Math.floor(props.price - (props.price * props.sale) / 100)}$</h2>
+            </section>
+            <section>
+              <button className="product-button">
+                <img
+                  className="icon"
+                  src="./image/shop.svg"
+                  alt=""
+                />
+              </button>
+            </section>
+
+          </section>
+          
+          
         </Card.Body>
       </Card>
     </div>

@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Route, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import "../../Style/header.css";
-import "../main component/Backet.jsx";
-import Backed from "../main component/Backet.jsx";
+import "../main component/Basket.jsx";
+//import Basked from "../main component/Basket.jsx";
+import TestShop from "../main component/TestShop";
 
 export default function Header(prop) {
   const { isLoggedIn } = prop;
@@ -44,8 +45,8 @@ export default function Header(prop) {
               sign in
             </a>
           )}
-
-          <Backed />
+          <TestShop />
+          {/* <Basked /> */}
 
           <p className="shopingP">+0</p>
         </section>

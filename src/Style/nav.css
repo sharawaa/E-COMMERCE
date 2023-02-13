@@ -19,3 +19,16 @@
   display: flex;
   flex-wrap: wrap;
 }
+.activeBtn{
+  width: 170px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 0px 10px;
+  background-color: 
+  #A7F65C;
+  border: solid 1px;
+
+  
+  color:#003585;
+}
+

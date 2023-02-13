@@ -11,15 +11,15 @@
 }
 
 #card {
-  height: 350px;
-  width: 282px;
-  border-radius: 30px;
+  height: 313px;
+  width: 280px;
+  border-radius: 20px;
 }
 #cardImg {
+  height: 173px;
   width: 280px;
-  height: 168px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .icon {
   width: 30px;
@@ -27,15 +27,27 @@
 }
 .sale {
   position: absolute;
-  margin-left: 182px;
-  width: 100px;
+  margin-left: 128px;
+  width: 150px;
   height: 40px;
   background-color: #a7f65c;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: 
+  #003585;
   font-size: 20px;
 }
 .sale p {
   margin-left: 25px;
 }
+.product-button{
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+}
+.cardBottom{
+  display: flex;
+  justify-content: space-between;
+}
+

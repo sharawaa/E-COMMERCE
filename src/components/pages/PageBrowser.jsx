@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../Browser/Footer";
-import Header from "../Browser/Header";
+// import Header from "../Browser/Header";
 //import Main from "../Browser/Main";
 export default function PageBrowser(prop) {
   //const { setIsLoggedIn } = prop;
-  const { isLoggedIn } = prop;
+  // const { isLoggedIn } = prop;
   return (
     <div
       style={{
@@ -15,7 +15,7 @@ export default function PageBrowser(prop) {
       }}
       className="App"
     >
-      <Header isLoggedIn={isLoggedIn} />
+      {/* <Header isLoggedIn={isLoggedIn} /> */}
       <Outlet />
       <Footer />
     </div>

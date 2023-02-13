@@ -6,9 +6,12 @@ import { ProductContext } from "../../App";
 export default function Navbar() {
   const { products } = useContext(ProductContext);
   const [filterProduct, setFilterProduct] = useState([]);
-
+  const [activeBtn, setActiveBtn]=useState("All")
+  //const [btnState, setBtnState]= useState(false)
   //const [Input, setInput] = useState(products);
   function filterHandler(e) {
+    setActiveBtn(e.target.innerText)
+    
     if (e.target.innerText === "All") {
       setFilterProduct(products);
     } else {
@@ -19,6 +22,7 @@ export default function Navbar() {
       console.log(e.target.innerText);
     }
   }
+ 
   // console.log(Input);
   return (
     <div className="container">
@@ -28,19 +32,19 @@ export default function Navbar() {
         </section>
 
         <section>
-          <button className="groupButton" onClick={filterHandler}>
+          <button className={activeBtn==="All" ? "activeBtn": "groupButton"} onClick={filterHandler}>
             All
           </button>
-          <button className="groupButton" onClick={filterHandler}>
+          <button className={activeBtn==="appliances" ? "activeBtn": "groupButton"} onClick={filterHandler}>
             appliances
           </button>
-          <button className="groupButton" onClick={filterHandler}>
+          <button className={activeBtn==="computers & tablets" ? "activeBtn": "groupButton"} onClick={filterHandler}>
             computers & tablets
           </button>
-          <button className="groupButton" onClick={filterHandler}>
+          <button className={activeBtn==="gaming console" ? "activeBtn": "groupButton"} onClick={filterHandler}>
             gaming console
           </button>
-          <button className="groupButton" onClick={filterHandler}>
+          <button className={activeBtn==="telescope" ? "activeBtn": "groupButton"} onClick={filterHandler}>
             telescope
           </button>
         </section>

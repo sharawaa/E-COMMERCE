@@ -31,10 +31,12 @@
 #searchButton{
     height: 48px;
     width: 132px;
-    border: none;
-    background: #FF8957;
+    
+    background: #003585;
     border-radius: 0px 20px 20px 0px;
-    border-color: #FF8957;
+  
+    border: solid #FFFFFF 2px ;
+    color: #FFFFFF;
 }
 .logOut{
     text-decoration: none;
@@ -44,9 +46,9 @@
 .shopingP{
     width: 25px;
     height: 25px;
-    background-color: #FF8957;
+    background-color: #A7F65C;
     border-radius: 50%;
-    color: #FFFFFF;
+    color: #003585;
     flex-grow: 0;
     font-size: 15px;
     margin-left: 10px;

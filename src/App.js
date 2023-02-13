@@ -3,11 +3,11 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import ProductCard from "./components/pages/ProductCard";
 import Searchs from "./components/pages/Searchs";
 import { createContext, useEffect, useState } from "react";
-import { users } from "./util/data";
 import Profile from "./components/pages/Profile";
 import axios from "axios";
 import Main from "./components/Browser/Main";
 import Login from "./components/pages/Login";
+import Header from "./components/Browser/Header"
 
 export const ProductContext = createContext();
 function App() {
@@ -16,7 +16,13 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [data, setData] = useState(false);
   const navigate = useNavigate();
+  const [users, setUsers]=useState()
   /* datagaa oruulj irjiine*/
+  useEffect(() => {
+    axios
+      .get("http://localhost:2022/users")
+      .then((users) => setUsers(users.data));
+  }, []);
 
   useEffect(() => {
     axios
@@ -41,7 +47,8 @@ function App() {
 
   return (
     <div>
-      <ProductContext.Provider value={{ products, setProducts }}>
+      <ProductContext.Provider value={{ products, setProducts, users, setProducts }}>
+        <Header />
         <Routes>
           <Route
             path="/login"
