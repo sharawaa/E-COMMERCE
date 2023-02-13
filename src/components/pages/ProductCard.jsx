@@ -34,7 +34,6 @@ export default function ProductCard() {
       setX(x - 1);
     }
   }
-
   function addBasket() {
     let baskets = [];
     setX(0);
