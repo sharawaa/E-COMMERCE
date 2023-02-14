@@ -12,7 +12,7 @@ export default function ProductCard() {
 
   let data = products && products.filter((product) => product.id === test.id);
   const [x, setX] = useState(data && data[0].stock);
-  data && console.log("productCatrd data", data[0].stock);
+ // data && console.log("productCatrd data", data[0].stock);
   // function addBasket(){
   //   let basketItem  = [];
   //   if(localStorage.getItem("basket")){
@@ -39,15 +39,15 @@ export default function ProductCard() {
     setX(0);
 
     if (localStorage.getItem("baskets")) {
-      baskets = JSON.parse(localStorage.getItem("baskets"));
-      const findData = baskets.find((product) => product.id === data[0].id);
-      if (findData) {
-        baskets[baskets.indexOf(findData)].stock =
-          baskets[baskets.indexOf(findData)].stock + x;
-        baskets = [...baskets];
-      } else {
-        baskets = [...baskets, { id: data[0].id, stock: x }];
-      }
+      //baskets = JSON.parse(localStorage.getItem("baskets"));
+      // const findData = baskets.find((product) => product.id === data[0].id);
+      // if (findData) {
+      //   baskets[baskets.indexOf(findData)].stock =
+      //     baskets[baskets.indexOf(findData)].stock + x;
+      //   baskets = [...baskets];
+      // } else {
+      //   baskets = [...baskets, { id: data[0].id, stock: x }];
+      // }
     } else {
       baskets = [...baskets, { id: data[0].id, stock: x }];
     }

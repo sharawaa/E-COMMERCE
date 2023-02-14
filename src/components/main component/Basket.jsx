@@ -3,6 +3,7 @@ import "../../Style/basked.css";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useContext } from "react";
 import { ProductContext } from "../../App";
+import OrderModal from "./OrderModal";
 
 export default function Basked() {
   const { products } = useContext(ProductContext);
@@ -14,11 +15,14 @@ export default function Basked() {
 
   let basketProduct =
     products &&
-    products.filter(
-      (product) =>
-        basketItem &&
-        basketItem.find((findProduct) => findProduct.id === product.id)
+    products.filter((product) =>
+    basketItem && basketItem.find((findProduct) => findProduct.id === product.id)
     );
+    // function deleteHandler(id){
+    //   let deleteHandler =
+    //   basketItem && basketItem.filter((delProd) => delProd.id !== id);
+    // localStorage.setItem("baskets", JSON.stringify(deleteHandler));
+    // }
   return (
     <>
       <a onClick={handleShow} href="##">
@@ -53,7 +57,7 @@ export default function Basked() {
             );
           })}
         </Offcanvas.Body>
-        <button className="orderButton">Захиалах</button>
+        <OrderModal />
       </Offcanvas>
     </>
   );
