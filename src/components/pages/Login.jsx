@@ -4,16 +4,18 @@ import "../../Style/login.css";
 import Register from "../main component/Register";
 
 export default function Login(prop) {
-  const { setLogin } = prop;
+  //const { setLogin } = prop;
   const { loginHandler } = prop;
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const [userName1, setUserName] = useState("");
   const [password1, setPassword] = useState("");
-  function login() {
-    console.log(userName1);
-    prop.loginHandler(userName1, password1);
-    navigate("/");
-  }
+
+  // function login() {
+  //   console.log(userName1);
+  //   let localUser = JSON.parse(localStorage.getItem("user"));
+  //   prop.loginHandler(userName1, password1);
+  //   navigate("/");
+  // }
 
   return (
     <div className="ContainerW ">

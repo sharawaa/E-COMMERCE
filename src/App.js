@@ -7,17 +7,14 @@ import Profile from "./components/pages/Profile";
 import axios from "axios";
 import Main from "./components/Browser/Main";
 import Login from "./components/pages/Login";
-import Header from "./components/Browser/Header"
+import Header from "./components/Browser/Header";
 
 export const ProductContext = createContext();
 function App() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [data, setData] = useState(false);
-  const [users, setUsers]=useState()
-
-  /* datagaa oruulj irjiine*/
+  const [users, setUsers] = useState();
 
   useEffect(() => {
     axios
@@ -25,38 +22,30 @@ function App() {
       .then((users) => setUsers(users.data));
   }, []);
 
-console.log("users",users)
-
-
   useEffect(() => {
     axios
       .get("http://localhost:2022/products")
       .then((products) => setProducts(products.data));
   }, []);
 
-  
-  
-  console.log("products shuu:", products);
-  
   function loginHandler(userName, userPassword) {
     users.map((user) => {
-      if (userName === user.userName && userPassword === user.password) {
-        if (user.role === "user") {
-          navigate("/");
-          setIsLoggedIn(true);
-        } else {
-          navigate("/");
-          setIsLoggedIn(true);
-        }
+      if (
+        (userName === user.email ||
+          userName === user.phone ||
+          userName === user.userName) &&
+        userPassword === user.password
+      ) {
+        navigate("/");
+        localStorage.setItem("currentUser", user.id);
       }
-      console.log("user.name",user.userName , user.password)
     });
   }
 
   return (
     <div>
-      <ProductContext.Provider value={{ products,  setProducts }}>
-        <Header isLoggedIn={isLoggedIn}/>
+      <ProductContext.Provider value={{ products, setProducts }}>
+        <Header />
         <Routes>
           <Route
             path="/login"
@@ -69,7 +58,7 @@ console.log("users",users)
             }
           />
 
-          <Route path="/" element={<PageBrowser  />}>
+          <Route path="/" element={<PageBrowser />}>
             <Route path="/" element={<Main products={products} />} />
             <Route path="/product/:id" element={<ProductCard />} />
             <Route

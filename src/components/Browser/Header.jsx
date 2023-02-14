@@ -6,16 +6,21 @@ import Basked from "../main component/Basket.jsx";
 //import TestShop from "../main component/TestShop";
 
 export default function Header(prop) {
-  const { isLoggedIn } = prop;
   const navigate = useNavigate();
   const [val, setVal] = useState("");
   function qwe() {
     navigate(`/search/${val}`);
   }
+  function logOut() {
+    localStorage.removeItem("currentUser");
+  }
   return (
     <div className="header">
       <div className="HeaderCont container">
-        <img src="./image/E-logo (1).png" alt="#" />
+        <a href="/">
+          {" "}
+          <img src="./image/E-logo (1).png" alt="#" />
+        </a>
 
         <section>
           <input
@@ -30,13 +35,13 @@ export default function Header(prop) {
         </section>
 
         <section style={{ display: "flex" }}>
-          {isLoggedIn ? (
+          {localStorage.getItem("currentUser") ? (
             <div>
               <a href="/profile">
                 <img src="./image/profile.svg" alt="#" />
               </a>
 
-              <a className="logOut" href="/">
+              <a className="logOut" href="/" onClick={logOut}>
                 Log out
               </a>
             </div>
