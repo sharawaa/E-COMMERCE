@@ -1,8 +1,8 @@
-import Navbar from "../main component/Navbar";
+import Navbar from "../mainComponent/Navbar";
 
-import Slider from "../main component/Slider";
+import Slider from "../mainComponent/Slider";
 import "../../Style/main.css";
-import Image from "../main component/Image";
+import Image from "../mainComponent/Image";
 // import Bottom from "../m-bottom/Bottom";
 // import Aside from "../m-bottom/Aside";
 // import Product from "../main component/Product";

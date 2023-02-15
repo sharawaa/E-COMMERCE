@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Style/header.css";
-import "../main component/Basket.jsx";
-import Basked from "../main component/Basket.jsx";
+import "../mainComponent/Basket.jsx";
+import Basked from "../mainComponent/Basket.jsx";
 //import TestShop from "../main component/TestShop";
 
 export default function Header(prop) {

@@ -15,14 +15,12 @@ export default function Basked() {
 
   let basketProduct =
     products &&
-    products.filter((product) =>
-    basketItem && basketItem.find((findProduct) => findProduct.id === product.id)
+    products.filter(
+      (product) =>
+        basketItem &&
+        basketItem.find((findProduct) => findProduct.id === product.id)
     );
-    // function deleteHandler(id){
-    //   let deleteHandler =
-    //   basketItem && basketItem.filter((delProd) => delProd.id !== id);
-    // localStorage.setItem("baskets", JSON.stringify(deleteHandler));
-    // }
+
   return (
     <>
       <a onClick={handleShow} href="##">
@@ -51,7 +49,7 @@ export default function Basked() {
               <div key={index} className="basket-product">
                 <img className="basket-image" src={prod.image} alt="" />
                 <p>{prod.name}</p>
-                <p>quanty{basketItem && basketItem[index].stock}</p>
+                {/* <p>quanty{basketItem && basketItem[index].stock}</p> */}
                 {/* <button onClick={() => deleteHandler(prod.id)}>X</button> */}
               </div>
             );

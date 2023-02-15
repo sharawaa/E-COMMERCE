@@ -15,7 +15,6 @@ function App() {
   const [products, setProducts] = useState([]);
   const [data, setData] = useState(false);
   const [users, setUsers] = useState();
-console.log(products)
   useEffect(() => {
     axios
       .get("http://localhost:2022/users")
@@ -44,7 +43,7 @@ console.log(products)
 
   return (
     <div>
-      <ProductContext.Provider value={{users, products, setProducts }}>
+      <ProductContext.Provider value={{ users, products, setProducts }}>
         <Header />
         <Routes>
           <Route

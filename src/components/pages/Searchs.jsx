@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 //import { DATA } from "../../util/data";
 import "../../Style/search.css";
 
-import Product from "../main component/Product";
+import Product from "../mainComponent/Product";
 
 export default function Searchs(props) {
   const test = useParams();
@@ -26,5 +26,10 @@ export default function Searchs(props) {
         />
       ))}
     </div>
+    // function deleteHandler(id){
+    //   let deleteHandler =
+    //   basketItem && basketItem.filter((delProd) => delProd.id !== id);
+    // localStorage.setItem("baskets", JSON.stringify(deleteHandler));
+    // }
   );
 }

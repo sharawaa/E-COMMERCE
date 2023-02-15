@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Style/login.css";
-import Register from "../main component/Register";
+import Register from "../mainComponent/Register";
 
 export default function Login(prop) {
   //const { setLogin } = prop;

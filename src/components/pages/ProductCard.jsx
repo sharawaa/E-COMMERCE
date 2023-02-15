@@ -8,20 +8,9 @@ import { ProductContext } from "../../App";
 export default function ProductCard() {
   const { products } = useContext(ProductContext);
   const test = useParams();
-  products && console.log("productCatrd id", products);
 
   let data = products && products.filter((product) => product.id === test.id);
-  const [x, setX] = useState(data && data[0].stock);
- // data && console.log("productCatrd data", data[0].stock);
-  // function addBasket(){
-  //   let basketItem  = [];
-  //   if(localStorage.getItem("basket")){
-  //     basketItem=JSON.parse(localStorage.getItem("basket"))
-  //   }
-  //   basketItem.push(...basketItem , {id:data[0].id});
-  //   localStorage.setItem("basket", JSON.stringify(basketItem))
-  //   console.log(data[0].id)
-  // }
+  const [x, setX] = useState(0);
 
   function add() {
     if (x < data[0].stock) {
@@ -39,15 +28,16 @@ export default function ProductCard() {
     setX(0);
 
     if (localStorage.getItem("baskets")) {
-      //baskets = JSON.parse(localStorage.getItem("baskets"));
-      // const findData = baskets.find((product) => product.id === data[0].id);
-      // if (findData) {
-      //   baskets[baskets.indexOf(findData)].stock =
-      //     baskets[baskets.indexOf(findData)].stock + x;
-      //   baskets = [...baskets];
-      // } else {
-      //   baskets = [...baskets, { id: data[0].id, stock: x }];
-      // }
+      baskets = JSON.parse(localStorage.getItem("baskets"));
+      const findData = baskets.find((product) => product.id === data[0].id);
+
+      if (findData) {
+        baskets[baskets.indexOf(findData)].stock =
+          baskets[baskets.indexOf(findData)].stock + x;
+        baskets = [...baskets];
+      } else {
+        baskets = [...baskets, { id: data[0].id, stock: x }];
+      }
     } else {
       baskets = [...baskets, { id: data[0].id, stock: x }];
     }
@@ -56,20 +46,23 @@ export default function ProductCard() {
   return (
     <div className="card-container">
       <div className="imgContainer">
-        <img src={data && data[0].image} alt="" />
+        {data.length > 0 && <img src={data[0].image} alt="" />}
       </div>
 
       <div className="information">
         <section className="PCardTop">
-          <h1>{data && data[0].name}</h1>
+          <h1>{data.length > 0 && data[0].name}</h1>
           <h4>
-            {data &&
+            {data.length > 0 &&
               Math.floor(data[0].price - (data[0].price * data[0].sale) / 100)}
             $
           </h4>
-          <p>Availability: {data && data[0].stock}</p>
+          <p>Availability: {data.length > 0 && data[0].stock}</p>
 
-          <p>Hurry up! only {data && data[0].stock} product left in stock!</p>
+          <p>
+            Hurry up! only {data.length > 0 && data[0].stock} product left in
+            stock!
+          </p>
         </section>
 
         <section className="PCardMain">
@@ -89,7 +82,7 @@ export default function ProductCard() {
 
         <section className="proCard-footer">
           <h6>sku: 01133-9-9</h6>
-          <h6>Category: {data && data[0].category}</h6>
+          <h6>Category: {data.length > 0 && data[0].category}</h6>
 
           <section className="proCard-share">
             <h6>Share: </h6>
