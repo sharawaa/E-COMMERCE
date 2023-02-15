@@ -13,6 +13,7 @@ export default function Header(prop) {
   }
   function logOut() {
     localStorage.removeItem("currentUser");
+    localStorage.removeItem("baskets");
   }
   return (
     <div className="header">

@@ -1,20 +1,19 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useContext } from "react";
+
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { ProductContext } from "../../App";
+
 
 export default function OrderModal() {
-  const { products } = useContext(ProductContext);
-  const { users } = useContext(ProductContext);
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   let baskets = JSON.parse(localStorage.getItem("baskets"));
   let user = localStorage.getItem("currentUser");
-  console.log(user);
+
 
   // let orderProducts =
   //   products &&

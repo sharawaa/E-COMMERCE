@@ -20,6 +20,7 @@ export default function Basked() {
         basketItem &&
         basketItem.find((findProduct) => findProduct.id === product.id)
     );
+    function orderDeleteHandler(){localStorage.removeItem("baskets")}
 
   return (
     <>
@@ -38,7 +39,7 @@ export default function Basked() {
             <div className="offTitle">
               <div>Таны сагс</div>
               <div>
-                <a href="##">Сагс хоослох</a>
+                < button onClick={orderDeleteHandler}>Сагс хоослох</button>
               </div>
             </div>
           </Offcanvas.Title>
@@ -48,13 +49,14 @@ export default function Basked() {
             return (
               <div key={index} className="basket-product">
                 <img className="basket-image" src={prod.image} alt="" />
-                <p>{prod.name}</p>
-                {/* <p>quanty{basketItem && basketItem[index].stock}</p> */}
-                {/* <button onClick={() => deleteHandler(prod.id)}>X</button> */}
+                <h5>{prod.name}</h5>
+                <h6>quanty {basketItem && basketItem[index].stock}</h6> 
+                <h6>price-{(prod.price)*(basketItem[index].stock)}$</h6>
               </div>
             );
           })}
         </Offcanvas.Body>
+        <p>{}</p>
         <OrderModal />
       </Offcanvas>
     </>

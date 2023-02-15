@@ -19,11 +19,9 @@ export default function Navbar() {
         products &&
         products.filter((product) => product.category === e.target.innerText);
       setFilterProduct(data);
-      console.log(e.target.innerText);
+    
     }
   }
-
-  // console.log(Input);
   return (
     <div className="container">
       <div className="navContainer">

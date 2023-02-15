@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-//import { DATA } from "../../util/data";
 import "../../Style/search.css";
 
 import Product from "../mainComponent/Product";
@@ -8,8 +7,8 @@ export default function Searchs(props) {
   const test = useParams();
   const { products } = props;
 
-  let dat = products.filter((a) =>
-    a.name.toLowerCase().includes(test.product.toLowerCase())
+  let dat = products.filter((product) =>
+  product.name.toLowerCase().includes(test.product.toLowerCase())
   );
 
   return (
@@ -26,10 +25,5 @@ export default function Searchs(props) {
         />
       ))}
     </div>
-    // function deleteHandler(id){
-    //   let deleteHandler =
-    //   basketItem && basketItem.filter((delProd) => delProd.id !== id);
-    // localStorage.setItem("baskets", JSON.stringify(deleteHandler));
-    // }
   );
 }

@@ -1,21 +1,12 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "../../Style/login.css";
 import Register from "../mainComponent/Register";
 
 export default function Login(prop) {
-  //const { setLogin } = prop;
+
   const { loginHandler } = prop;
-  //const navigate = useNavigate();
   const [userName1, setUserName] = useState("");
   const [password1, setPassword] = useState("");
-
-  // function login() {
-  //   console.log(userName1);
-  //   let localUser = JSON.parse(localStorage.getItem("user"));
-  //   prop.loginHandler(userName1, password1);
-  //   navigate("/");
-  // }
 
   return (
     <div className="ContainerW ">
