@@ -8,7 +8,7 @@ import UserProvider from "./components/mainComponent/UserProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter >
     <UserProvider>
       <App />
     </UserProvider>

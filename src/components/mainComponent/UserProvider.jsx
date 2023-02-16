@@ -14,6 +14,7 @@ export default function UserProvider({ children }) {
         userPassword: e.target.userPassword.value,
       })
       .then((res) => setUser(res.data));
+
   }
 
   return (

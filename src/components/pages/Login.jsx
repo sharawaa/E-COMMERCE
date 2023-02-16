@@ -1,11 +1,15 @@
 import { useContext } from "react";
+
 import "../../Style/login.css";
 import Register from "../mainComponent/Register";
 import { UserContext } from "../mainComponent/UserProvider";
 
-export default function Login(prop) {
+export default function Login() {
   const { loginHandler, user } = useContext(UserContext);
-  console.log(user);
+  console.log("login",user);
+  localStorage.setItem("currentUser",user.id)
+  
+
   return (
     <div className="ContainerW ">
       <div className="cards">

@@ -13,14 +13,6 @@ export const ProductContext = createContext();
 function App() {
   const [products, setProducts] = useState([]);
 
-  const [data, setData] = useState(false);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:2022/loginHandler")
-  //     .then((res) => setUser(res.data));
-  // }, []);
-  // console.log(user);
 
   useEffect(() => {
     axios
@@ -33,9 +25,10 @@ function App() {
       <ProductContext.Provider value={{ products, setProducts }}>
         <Header />
         <Routes>
+
           <Route
             path="/login"
-            element={<Login users={data} setData={setData} />}
+            element={<Login />}
           />
 
           <Route path="/" element={<PageBrowser />}>

@@ -15,7 +15,7 @@ export default function PageBrowser(prop) {
       }}
       className="App"
     >
-      {/* <Header isLoggedIn={isLoggedIn} /> */}
+      
       <Outlet />
       <Footer />
     </div>
