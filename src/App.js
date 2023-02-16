@@ -1,5 +1,5 @@
 import PageBrowser from "./components/pages/PageBrowser";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import ProductCard from "./components/pages/ProductCard";
 import Searchs from "./components/pages/Searchs";
 import { createContext, useEffect, useState } from "react";
@@ -11,15 +11,16 @@ import Header from "./components/Browser/Header";
 
 export const ProductContext = createContext();
 function App() {
-  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
+
   const [data, setData] = useState(false);
-  const [users, setUsers] = useState();
-  useEffect(() => {
-    axios
-      .get("http://localhost:2022/users")
-      .then((users) => setUsers(users.data));
-  }, []);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:2022/loginHandler")
+  //     .then((res) => setUser(res.data));
+  // }, []);
+  // console.log(user);
 
   useEffect(() => {
     axios
@@ -27,34 +28,14 @@ function App() {
       .then((products) => setProducts(products.data));
   }, []);
 
-  function loginHandler(userName, userPassword) {
-    users.map((user) => {
-      if (
-        (userName === user.email ||
-          userName === user.phone ||
-          userName === user.userName) &&
-        userPassword === user.password
-      ) {
-        navigate("/");
-        localStorage.setItem("currentUser", user.id);
-      }
-    });
-  }
-
   return (
     <div>
-      <ProductContext.Provider value={{ users, products, setProducts }}>
+      <ProductContext.Provider value={{ products, setProducts }}>
         <Header />
         <Routes>
           <Route
             path="/login"
-            element={
-              <Login
-                users={data}
-                setData={setData}
-                loginHandler={loginHandler}
-              />
-            }
+            element={<Login users={data} setData={setData} />}
           />
 
           <Route path="/" element={<PageBrowser />}>

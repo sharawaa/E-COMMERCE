@@ -4,23 +4,13 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-
 export default function OrderModal() {
-
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   let baskets = JSON.parse(localStorage.getItem("baskets"));
   let user = localStorage.getItem("currentUser");
-
-
-  // let orderProducts =
-  //   products &&
-  //   products.filter(
-  //     (product) =>
-  //       baskets && baskets.find((findBaskets) => findBaskets.id == product.id)
-  //   );
 
   function toOrder(e) {
     e.preventDefault();
