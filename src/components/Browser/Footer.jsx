@@ -1,14 +1,8 @@
+import "../../Style/footer.css";
+
 export default function Footer() {
   return (
-    <div
-      style={{
-        backgroundColor: "blue",
-        height: "282px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-around",
-      }}
-    >
+    <div className="footer-container">
       <div
         className="container"
         style={{

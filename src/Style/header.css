@@ -1,57 +1,52 @@
-.header{
-    display: flex;
-    background-color: rgb(19, 52, 128);
-    height: 100px;
-    align-items: center;
-    
-    
+.header {
+  display: flex;
+  background-color: #003585;
+  height: 100px;
+  align-items: center;
 }
-.HeaderCont{
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-around;
-    
+.HeaderCont {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
 }
 #signIn {
-    text-decoration: none;
-    font-size: 20px;
-    color: #FFFFFF;
-    margin: 0px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0px 30px;
 }
 
-.searchInp{
-    width: 523px;
-    height: 48px;
+.searchInp {
+  width: 523px;
+  height: 48px;
 
-    background: #FFFFFF;
-    border-radius: 20px 0px 0px 20px;
-    
-    border: none;
-}
-#searchButton{
-    height: 48px;
-    width: 132px;
-    
-    background: #003585;
-    border-radius: 0px 20px 20px 0px;
-  
-    border: solid #FFFFFF 2px ;
-    color: #FFFFFF;
-}
-.logOut{
-    text-decoration: none;
-    color: #FFFFFF;
-    margin: 0px 20px;
-}
-.shopingP{
-    width: 25px;
-    height: 25px;
-    background-color: #A7F65C;
-    border-radius: 50%;
-    color: #003585;
-    flex-grow: 0;
-    font-size: 15px;
-    margin-left: 10px;
-}
+  background: #ffffff;
+  border-radius: 20px 0px 0px 20px;
 
+  border: none;
+}
+#searchButton {
+  height: 48px;
+  width: 132px;
 
+  background: #003585;
+  border-radius: 0px 20px 20px 0px;
+
+  border: solid #ffffff 2px;
+  color: #ffffff;
+}
+.logOut {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0px 20px;
+}
+.shopingP {
+  width: 25px;
+  height: 25px;
+  background-color: #a7f65c;
+  border-radius: 50%;
+  color: #003585;
+  flex-grow: 0;
+  font-size: 15px;
+  margin-left: 10px;
+}

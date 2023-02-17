@@ -10,7 +10,7 @@ export default function OrderModal() {
   const handleShow = () => setShow(true);
 
   let baskets = JSON.parse(localStorage.getItem("baskets"));
-  let user = localStorage.getItem("currentUser");
+  let user = JSON.parse(localStorage.getItem("currentUser"));
 
   function toOrder(e) {
     e.preventDefault();
@@ -19,7 +19,7 @@ export default function OrderModal() {
       phone: e.target.phoneNumber.value,
       date: new Date().toLocaleDateString(),
       orderProducts: baskets,
-      userId: user,
+      userId: user.id,
     };
     axios
       .post("http://localhost:2022/orders", object)

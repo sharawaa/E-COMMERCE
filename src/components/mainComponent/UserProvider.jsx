@@ -1,10 +1,18 @@
 import axios from "axios";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const UserContext = createContext();
 
 export default function UserProvider({ children }) {
+  const navigate = useNavigate();
   const [user, setUser] = useState([]);
+
+  useEffect(() => {
+    if (localStorage.getItem("currentUser"))
+      setUser(JSON.parse(localStorage.getItem("currentUser")));
+  }, []);
+
   function loginHandler(e) {
     e.preventDefault();
 
@@ -13,8 +21,13 @@ export default function UserProvider({ children }) {
         userName: e.target.userName.value,
         userPassword: e.target.userPassword.value,
       })
-      .then((res) => setUser(res.data));
-
+      .then(
+        (res) => (
+          setUser(res.data),
+          navigate("/"),
+          localStorage.setItem("currentUser", JSON.stringify(res.data))
+        )
+      );
   }
 
   return (

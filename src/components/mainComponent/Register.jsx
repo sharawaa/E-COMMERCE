@@ -19,6 +19,7 @@ export default function Register() {
       sureName: e.target.sureName.value,
       phone: e.target.phoneNumber.value,
       date: new Date().toLocaleDateString(),
+      role: "user",
     });
   }
 

@@ -6,9 +6,6 @@ import { UserContext } from "../mainComponent/UserProvider";
 
 export default function Login() {
   const { loginHandler, user } = useContext(UserContext);
-  console.log("login",user);
-  localStorage.setItem("currentUser",user.id)
-  
 
   return (
     <div className="ContainerW ">
