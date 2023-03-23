@@ -4,30 +4,26 @@
 
   align-items: center;
   justify-content: center;
-  background-color: rgb(38,71,139 );
+  background-color: rgb(38, 71, 139);
 }
 .cards {
-  
   height: 500px;
   width: 600px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 10px 10px 5px black;
-  
-  
 }
-.userCont{
+.userCont {
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
   flex-direction: column;
-  
 
   width: 550px;
   height: 450px;
 }
-.cards img{
+.cards img {
   width: 150px;
   height: 50px;
   margin-right: 300px;
@@ -46,10 +42,12 @@
   background-color: #003585;
   color: white;
 }
-.button2{
+.button2 {
   width: 430px;
   height: 50px;
-  border: solid #A7F65C 2px;
+  border: solid #a7f65c 2px;
   margin: auto;
-
+}
+.register {
+  margin-left: 60px;
 }

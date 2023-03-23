@@ -29,10 +29,11 @@ export default function Login() {
               Нэвтрэх
             </button>
             <p>----------------------------Эсвэл----------------------------</p>
-
-            <Register />
           </section>
         </form>
+        <section className="register">
+          <Register />
+        </section>
       </div>
     </div>
   );

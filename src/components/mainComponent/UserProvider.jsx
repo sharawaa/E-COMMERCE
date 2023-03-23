@@ -17,7 +17,7 @@ export default function UserProvider({ children }) {
     e.preventDefault();
 
     axios
-      .post("http://localhost:2022/loginHandler", {
+      .post("http://localhost:2000/loginHandler", {
         userName: e.target.userName.value,
         userPassword: e.target.userPassword.value,
       })

@@ -12,15 +12,15 @@ export default function Register() {
 
   function userSave(e) {
     e.preventDefault();
-    axios.post("http://localhost:2022/users", {
+    axios.post("http://localhost:2000/register", {
       userName: e.target.name.value,
+      sureName: e.target.sureName.value,
       password: e.target.password.value,
       email: e.target.eMail.value,
-      sureName: e.target.sureName.value,
       phone: e.target.phoneNumber.value,
-      date: new Date().toLocaleDateString(),
       role: "user",
     });
+    console.log(e.target.name.value);
   }
 
   return (
