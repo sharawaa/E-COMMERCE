@@ -1,4 +1,4 @@
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 //import { DATA } from "../../util/data";
 
 import "../../Style/productCard.css";
@@ -43,6 +43,7 @@ export default function ProductCard() {
     }
     localStorage.setItem("baskets", JSON.stringify(baskets));
   }
+
   return (
     <div className="card-container">
       <div className="imgContainer">
