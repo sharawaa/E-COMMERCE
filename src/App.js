@@ -13,7 +13,6 @@ export const ProductContext = createContext();
 function App() {
   const [products, setProducts] = useState([]);
 
-  //git hub
   useEffect(() => {
     axios
       .get("http://localhost:2000/product")
@@ -34,7 +33,7 @@ function App() {
               path="/search/:product"
               element={<Searchs products={products} />}
             />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile" element={<Profile products={products} />} />
           </Route>
         </Routes>
       </ProductContext.Provider>

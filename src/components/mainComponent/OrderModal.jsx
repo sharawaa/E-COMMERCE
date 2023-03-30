@@ -19,10 +19,11 @@ export default function OrderModal() {
       phone: e.target.phoneNumber.value,
       date: new Date().toLocaleDateString(),
       orderProducts: baskets,
-      userId: user.id,
+      userId: user.data._id,
     };
+
     axios
-      .post("http://localhost:2022/orders", object)
+      .post("http://localhost:2000/order", object)
       .then((res) => console.log(res));
 
     console.log("hayg", e.target.homeAddress.value);
