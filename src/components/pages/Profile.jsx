@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import MapTest from "../m-bottom/MapTest";
 import { UserContext } from "../mainComponent/UserProvider";
 
 export default function Profile() {
@@ -8,7 +9,8 @@ export default function Profile() {
     <>
       <div>
         <section>
-          <h1>Hello {user.userName}</h1>
+          {/* <h1>Hello {user.userName}</h1> */}
+          <MapTest/>
         </section>
       </div>
     </>
