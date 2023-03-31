@@ -11,13 +11,13 @@ export default function Profile(props) {
   const users = user && user.data;
   // const products = props.products;
 
- function profileOrder(){
-  axios.post("http://localhost:2000/profileOrder", {userId:users._id}).then((res)=>(setOrders(res.data.product),setStock(res.data.stock)))
-  
+  function profileOrder() {
+    axios
+      .post("http://localhost:2000/profileOrder", { userId: users._id })
+      .then((res) => (setOrders(res.data.product), setStock(res.data.stock)));
+  }
 
- }
-  
-console.log("zahialguud",stock)
+  console.log("zahialguud", orders);
   // let findOrder = orders && orders.find((order) => order.userId === users._id);
 
   // let findProduct =
