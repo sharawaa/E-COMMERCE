@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Style/header.css";
@@ -5,12 +6,17 @@ import "../mainComponent/Basket.jsx";
 import Basked from "../mainComponent/Basket.jsx";
 //import TestShop from "../main component/TestShop";
 
-export default function Header(prop) {
+export default function Header() {
   const navigate = useNavigate();
   const [val, setVal] = useState("");
+  const [searchProduct, setSearchProduct]= useState([])
   function qwe() {
+    axios.post("http://localhost:2000/search",{val}).then((res)=>(setSearchProduct(res.data)))
     navigate(`/search/${val}`);
   }
+  
+
+  console.log("setSearchProduct",searchProduct)
   function logOut() {
     localStorage.removeItem("currentUser");
     localStorage.removeItem("baskets");
