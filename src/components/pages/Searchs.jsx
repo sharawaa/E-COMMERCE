@@ -1,11 +1,10 @@
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import "../../Style/search.css";
 
 export default function Searchs() {
   const param = useParams();
 
-  console.log("products",param)
+  console.log("paaraam",param)
 
 
   

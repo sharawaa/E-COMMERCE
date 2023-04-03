@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useContext, useState } from "react";
 //import MapTest from "../m-bottom/MapTest";
-import { UserContext } from "../mainComponent/UserProvider";
+import { UserContext } from "../context/UserProvider";
 import "../../Style/profile.css";
 
 export default function Profile(props) {

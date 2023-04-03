@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import "../../Style/login.css";
 import Register from "../mainComponent/Register";
-import { UserContext } from "../mainComponent/UserProvider";
+import { UserContext } from "../context/UserProvider";
 
 export default function Login() {
   const { loginHandler, user } = useContext(UserContext);
