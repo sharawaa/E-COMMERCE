@@ -29,10 +29,7 @@ function App() {
           <Route path="/" element={<PageBrowser />}>
             <Route path="/" element={<Main products={products} />} />
             <Route path="/product/:id" element={<ProductCard />} />
-            <Route
-              path="/search/:product"
-              element={<Searchs products={products} />}
-            />
+            <Route path="/search/:value" element={<Searchs />} />
             <Route path="/profile" element={<Profile products={products} />} />
           </Route>
         </Routes>

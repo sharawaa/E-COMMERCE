@@ -8,15 +8,15 @@ import Basked from "../mainComponent/Basket.jsx";
 
 export default function Header() {
   const navigate = useNavigate();
-  const [val, setVal] = useState("");
-  const [searchProduct, setSearchProduct]= useState([])
-  function qwe() {
-    axios.post("http://localhost:2000/search",{val}).then((res)=>(setSearchProduct(res.data)))
-    navigate(`/search/${val}`);
-  }
-  
 
-  console.log("setSearchProduct",searchProduct)
+  //query geer paramsaa barij avaad shidne
+
+  function searchHandler(e) {
+    e.preventDefault();
+
+    navigate(`/search/${e.target.search.value}`);
+  }
+
   function logOut() {
     localStorage.removeItem("currentUser");
     localStorage.removeItem("baskets");
@@ -29,17 +29,16 @@ export default function Header() {
           <img src="./image/E-logo (1).png" alt="#" />
         </a>
 
-        <section>
+        <form onSubmit={searchHandler}>
           <input
             placeholder="Search any things"
             className="searchInp"
-            onChange={(e) => setVal(e.target.value)}
-            type=""
+            name="search"
           />
-          <button onClick={qwe} id="searchButton">
+          <button type="submit" id="searchButton">
             Search
           </button>
-        </section>
+        </form>
 
         <section style={{ display: "flex" }}>
           {localStorage.getItem("currentUser") ? (
